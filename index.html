@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c5f55">
+  <title>Villani 2.0 — Central do Aluno</title>
+  <meta name="description" content="Consulta de alunos, ocorrências e boletins.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span>V</span><div><b>Villani 2.0</b><small>Central do aluno</small></div></a>
+    <div class="top-actions"><div class="connection"><i></i><span id="connectionText">Conectando à base...</span></div><button id="masterButton" class="master-button">Acesso master</button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div><small>GESTÃO ESCOLAR INTEGRADA</small><h1>Uma visão completa<br>de cada aluno.</h1><p>Cadastro, ocorrências e boletim conectados em uma experiência simples e responsiva.</p></div>
+      <div class="hero-number"><span>Alunos ativos</span><strong id="studentCount">—</strong><small id="classCount">Carregando turmas</small></div>
+    </section>
+
+    <nav class="tabs" aria-label="Seções">
+      <button class="active" data-tab="students">Alunos</button>
+      <button data-tab="occurrences">Ocorrências</button>
+      <button data-tab="report">Boletim</button>
+      <button data-tab="register">+ Fazer ocorrência</button>
+    </nav>
+
+    <div id="message" class="message" hidden></div>
+
+    <section id="students" class="view active">
+      <div class="heading"><div><small>BASE SINCRONIZADA</small><h2>Consulta de alunos</h2></div><b id="resultCount">0 resultados</b></div>
+      <div class="filters"><select id="classFilter" aria-label="Turma"><option value="">Selecione uma turma</option></select><label class="search"><span>⌕</span><input id="studentSearch" type="search" placeholder="Pesquisar nome ou RA" disabled></label></div>
+      <div id="studentGrid" class="student-grid"><div class="empty">Selecione uma turma para carregar somente os alunos solicitados.</div></div>
+    </section>
+
+    <section id="occurrences" class="view">
+      <div class="heading"><div><small>HISTÓRICO UNIFICADO</small><h2>Consulta de ocorrências</h2></div><b id="occurrenceCount">0 registros</b></div>
+      <div class="filters occurrence-filters"><select id="occurrenceClass"><option value="">Todas as turmas</option></select><select id="occurrenceStudent" disabled><option value="">Todos os alunos</option></select><label class="search"><span>⌕</span><input id="occurrenceSearch" type="search" placeholder="Pesquisar nesta página"></label><input id="dateFrom" type="date" aria-label="Data inicial"><input id="dateTo" type="date" aria-label="Data final"></div>
+      <div id="occurrenceList" class="timeline"></div>
+      <div class="pagination"><button id="previousOccurrence" disabled>Anterior</button><span id="occurrencePage">Página 1</span><button id="nextOccurrence" disabled>Próxima</button></div>
+    </section>
+
+    <section id="report" class="view">
+      <div class="heading"><div><small>ARQUIVOS JSON</small><h2>Boletim do aluno</h2></div><div class="heading-selects"><select id="reportClass"><option value="">Turma</option></select><select id="reportStudent" disabled><option value="">Selecione um aluno</option></select></div></div>
+      <div id="reportContent" class="empty">Selecione um aluno para consultar os arquivos de boletim.</div>
+    </section>
+
+    <section id="register" class="view narrow">
+      <div class="heading"><div><small>GRAVAÇÃO NO FIREBASE</small><h2>Nova ocorrência</h2><p>O registro ficará vinculado ao histórico do aluno.</p></div></div>
+      <form id="occurrenceForm" class="form-card">
+        <label>Turma<select id="formClass" required><option value="">Selecione a turma</option></select></label>
+        <label>Aluno<select id="formStudent" required disabled><option value="">Selecione o aluno</option></select></label>
+        <div id="selectedStudent" class="selected full" hidden></div>
+        <label>Data do fato<input id="eventDate" type="date" required></label>
+        <label>Horário<input id="eventTime" type="time"></label>
+        <label>Categoria<select id="category"><option>Pedagógica</option><option>Comportamental</option><option>Convivência</option><option>Saúde</option><option>Administrativa</option></select></label>
+        <label>Professor / responsável<input id="teacher" autocomplete="name"></label>
+        <label class="full">Descrição<textarea id="description" rows="5" required placeholder="Descreva objetivamente o ocorrido..."></textarea></label>
+        <label class="full">Ação tomada<textarea id="actionTaken" rows="3"></textarea></label>
+        <div id="saveResult" class="save-result full" hidden></div>
+        <button id="saveButton" class="primary full" type="submit">Salvar ocorrência no Firebase</button>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="photoDialog" class="photo-dialog"><button class="dialog-close" aria-label="Fechar">×</button><img alt="Foto ampliada"><strong></strong></dialog>
+  <dialog id="masterDialog" class="modal-card">
+    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+    <form id="masterForm">
+      <span class="modal-icon">F</span><small>ACESSO EXCLUSIVO</small><h2>Área master</h2><p>Entre para editar ou apagar ocorrências gravadas no Firebase.</p>
+      <label>Usuário<input id="masterUser" autocomplete="username" value="fernando" required></label>
+      <label>Senha<input id="masterPassword" type="password" autocomplete="current-password" required></label>
+      <div id="masterError" class="modal-error" hidden></div>
+      <button class="primary" type="submit">Entrar como Fernando</button>
+    </form>
+  </dialog>
+  <dialog id="editDialog" class="modal-card wide">
+    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+    <form id="editForm" class="edit-form">
+      <div class="full"><small>PAINEL MASTER</small><h2>Editar ocorrência</h2><p id="editStudentLabel"></p></div>
+      <input id="editId" type="hidden">
+      <label>Data do fato<input id="editDate" type="date" required></label>
+      <label>Horário<input id="editTime" type="time"></label>
+      <label>Categoria<select id="editCategory"><option>Pedagógica</option><option>Comportamental</option><option>Convivência</option><option>Saúde</option><option>Administrativa</option><option>Registro geral</option></select></label>
+      <label>Professor / responsável<input id="editTeacher"></label>
+      <label class="full">Descrição<textarea id="editDescription" rows="5" required></textarea></label>
+      <label class="full">Ação tomada<textarea id="editAction" rows="3"></textarea></label>
+      <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
+    </form>
+  </dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

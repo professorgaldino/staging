@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function anonymousOrSignedIn() { return request.auth != null; }
+    function master() { return anonymousOrSignedIn() && request.auth.token.email == 'fernando@villani.app'; }
+
+    // Consultas públicas solicitadas para o site no GitHub Pages.
+    match /publicData/{id} { allow read: if true; allow write: if false; }
+    match /students/{id} { allow read: if true; allow write: if false; }
+    match /classes/{id} { allow read: if true; allow write: if false; }
+    match /reportCards/{id} { allow read: if true; allow write: if false; }
+
+    // Qualquer visitante entra anonimamente e pode criar, mas nunca alterar ou apagar.
+    match /occurrences/{id} {
+      allow read: if true;
+      allow create: if anonymousOrSignedIn()
+        && request.resource.data.studentId is string
+        && request.resource.data.studentRa is string
+        && request.resource.data.studentName is string
+        && request.resource.data.classId is string
+        && request.resource.data.eventDate is string
+        && request.resource.data.description is string
+        && request.resource.data.description.size() >= 3
+        && request.resource.data.description.size() <= 3000;
+      allow update, delete: if master();
+    }
+
+    match /{document=**} { allow read, write: if false; }
+  }
+}
