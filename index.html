@@ -32,6 +32,12 @@
 
     <div id="message" class="message" hidden></div>
 
+    <section id="masterTools" class="master-tools" hidden>
+      <div class="master-tools-icon">↻</div>
+      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização de alunos</h2><p>Leia a base atual do Apps Script e atualize alunos e turmas no Firebase.</p><span id="lastSyncText">Nenhuma sincronização localizada.</span></div>
+      <button id="syncStudentsButton" class="sync-button">Sincronizar agora</button>
+    </section>
+
     <section id="students" class="view active">
       <div class="heading"><div><small>BASE SINCRONIZADA</small><h2>Consulta de alunos</h2></div><b id="resultCount">0 resultados</b></div>
       <div class="filters"><select id="classFilter" aria-label="Turma"><option value="">Selecione uma turma</option></select><label class="search"><span>⌕</span><input id="studentSearch" type="search" placeholder="Pesquisar nome ou RA" disabled></label></div>

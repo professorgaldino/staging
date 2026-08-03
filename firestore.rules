@@ -6,8 +6,9 @@ service cloud.firestore {
 
     // Consultas públicas solicitadas para o site no GitHub Pages.
     match /publicData/{id} { allow read: if true; allow write: if false; }
-    match /students/{id} { allow read: if true; allow write: if false; }
-    match /classes/{id} { allow read: if true; allow write: if false; }
+    match /students/{id} { allow read: if true; allow write: if master(); }
+    match /classes/{id} { allow read: if true; allow write: if master(); }
+    match /settings/{id} { allow read, write: if master(); }
     match /reportCards/{id} { allow read: if true; allow write: if false; }
 
     // Qualquer visitante entra anonimamente e pode criar, mas nunca alterar ou apagar.
