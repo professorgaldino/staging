@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260803-5">
 </head>
 <body>
   <header class="topbar">
@@ -34,8 +34,8 @@
 
     <section id="masterTools" class="master-tools" hidden>
       <div class="master-tools-icon">↻</div>
-      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização de alunos</h2><p>Leia a base atual do Apps Script e atualize alunos e turmas no Firebase.</p><span id="lastSyncText">Nenhuma sincronização localizada.</span></div>
-      <button id="syncStudentsButton" class="sync-button">Sincronizar agora</button>
+      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização com as planilhas</h2><p>Atualize alunos, turmas e o histórico antigo de ocorrências no Firebase.</p><span id="lastSyncText">Nenhuma sincronização de alunos localizada.</span><span id="lastOccurrenceSyncText">Nenhuma sincronização de ocorrências localizada.</span></div>
+      <div class="sync-actions"><button id="syncStudentsButton" class="sync-button">Sincronizar alunos</button><button id="syncOccurrencesButton" class="sync-button secondary-sync">Sincronizar ocorrências</button></div>
     </section>
 
     <section id="students" class="view active">
@@ -99,6 +99,6 @@
       <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
     </form>
   </dialog>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=20260803-5"></script>
 </body>
 </html>
