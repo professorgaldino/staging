@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInAnonymously, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 import { collection, deleteDoc, doc, getCountFromServer, getDoc, getDocs, getFirestore, limit, orderBy, query, serverTimestamp, setDoc, startAfter, Timestamp, updateDoc, where, writeBatch } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
-import { firebaseConfig, occurrencesSyncUrl, studentsSyncUrl } from "./firebase-config.js?v=20260803-6";
+import { firebaseConfig, occurrencesSyncUrl, studentsSyncUrl } from "./firebase-config.js?v=20260803-7";
 
 const CLASSES=["6A","6B","6C","7A","7B","7C","8A","8B","8C","9A","9B","9C","1A","1B","1C","1D","2A","2B","3A"];
 const PAGE_SIZE=5;
@@ -23,6 +23,7 @@ function occurrenceTimestamp(value){
 }
 const canonicalStudentId=student=>`ra-${normalizeRa(student.ra)}-${normalizeRa(student.digit)||"0"}`;
 async function commitOperations(operations){for(let start=0;start<operations.length;start+=350){const batch=writeBatch(db);for(const operation of operations.slice(start,start+350)){if(operation.type==="delete")batch.delete(operation.ref);else batch.set(operation.ref,operation.data,operation.options||{})}await batch.commit()}}
+async function fetchJsonFresh(url,attempts=3){let lastError;for(let attempt=1;attempt<=attempts;attempt++){try{const separator=url.includes("?")?"&":"?",response=await fetch(url+separator+"_="+Date.now()+"-"+attempt,{cache:"no-store",redirect:"follow"});if(!response.ok)throw new Error("HTTP "+response.status);return await response.json()}catch(error){lastError=error;if(attempt<attempts)await new Promise(resolve=>setTimeout(resolve,700*attempt))}}throw lastError}
 
 function adaptStudent(raw,index){const ra=String(raw.ra||raw.RA||""),digit=String(raw.digit||raw.digito||""),status=normalize(raw.situacao||raw.status),explicitActive=raw.active;const active=explicitActive!==undefined?[true,"true",1,"1","sim","ativo"].includes(typeof explicitActive==="string"?normalize(explicitActive):explicitActive):(status?status==="ativo":true);return{id:String(raw.id||`ra-${normalizeRa(ra)}-${normalizeRa(digit)||index}`),name:String(raw.name||raw.nome||"Aluno sem nome"),ra,digit,classId:String(raw.classId||raw.sala||raw.Sala||"").toUpperCase(),number:Number(raw.number||raw.numero)||"",tutor:String(raw.tutor||raw.Tutor||""),elective:String(raw.elective||raw.eletiva1||raw.elective1||""),birthday:String(raw.birthday||raw.nascimento||""),photoUrl:String(raw.photoUrl||raw.foto||""),active}}
 function field(raw,keys){for(const key of keys)if(raw[key]!==undefined&&raw[key]!==null)return raw[key];return""}
@@ -116,7 +117,7 @@ $("#syncOccurrencesButton").onclick=async()=>{
   const button=$("#syncOccurrencesButton");let syncStage="renovar a credencial master";button.disabled=true;button.textContent="Sincronizando...";$("#connectionText").textContent="Atualizando ocorrências";
   try{
     await auth.currentUser.getIdToken(true);syncStage="baixar as ocorrências do Apps Script";
-    const response=await fetch(occurrencesSyncUrl,{cache:"no-store"});if(!response.ok)throw new Error("HTTP "+response.status);const raw=extractArray(await response.json());if(!raw.length)throw new Error("Base de ocorrências vazia");
+    const raw=extractArray(await fetchJsonFresh(occurrencesSyncUrl));if(!raw.length)throw new Error("Base de ocorrências vazia");
     syncStage="carregar o índice de alunos";
     const indexSnapshot=await getDoc(doc(db,"settings","student-index")),byRa=new Map(),byName=new Map(),indexedStudents=Object.values(indexSnapshot.data()?.students||{});
     if(indexedStudents.length)indexedStudents.forEach(student=>{byRa.set(normalizeRa(student.ra),student);byName.set(normalize(student.name),student)});else{const studentsSnapshot=await getDocs(collection(db,"students"));studentsSnapshot.docs.forEach((entry,index)=>{const student=adaptStudent({id:entry.id,...entry.data()},index);if(normalizeRa(student.ra))byRa.set(normalizeRa(student.ra),student);if(normalize(student.name))byName.set(normalize(student.name),student)})}
