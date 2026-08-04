@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#061b35">
-  <title>Villani 2.0 — Central de ferramentas</title>
-  <meta name="description" content="Consulta de alunos, ocorrências e histórico de ocorrências.">
+  <title>Villani 2.0 — Central do Aluno</title>
+  <meta name="description" content="Consulta de alunos, ocorrências e boletins.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260803-18">
+  <link rel="stylesheet" href="styles.css?v=20260803-19">
 </head>
 <body>
   <div class="school-strip"><span>Educação, conhecimento e transformação</span><b>Escola Ouro 2024 • Escola Diamante 2025</b></div>
@@ -74,10 +74,9 @@
     <button class="dialog-close" type="button" aria-label="Fechar">×</button>
     <form id="masterForm">
       <span class="modal-icon">M</span><small>ACESSO EXCLUSIVO</small><h2>Área master</h2><p>Entre para editar ou apagar ocorrências gravadas no banco de dados.</p>
-      <label>Usuário<input id="masterUser" autocomplete="username" value="fernando" required></label>
       <label>Senha<input id="masterPassword" type="password" autocomplete="current-password" required></label>
       <div id="masterError" class="modal-error" hidden></div>
-      <button class="primary" type="submit">Entrar como Fernando</button>
+      <button class="primary" type="submit">Entrar</button>
     </form>
   </dialog>
   <dialog id="editDialog" class="modal-card wide">
@@ -95,6 +94,6 @@
     </form>
   </dialog>
   <footer class="site-footer">© 2026 E.E. Therezinha Villani • Gestão escolar integrada</footer>
-  <script type="module" src="app.js?v=20260803-18"></script>
+  <script type="module" src="app.js?v=20260803-19"></script>
 </body>
 </html>

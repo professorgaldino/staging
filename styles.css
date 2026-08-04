@@ -24,3 +24,14 @@ main{width:min(1160px,calc(100% - 40px))}.hero{margin-top:34px;padding:58px 48px
 input:focus,select:focus,textarea:focus{border-color:#2183c4;box-shadow:0 0 0 3px rgba(33,131,196,.12)}.date,th,.selected{background:#edf5fb;color:var(--green)}.master-occurrence{border-color:#8ebcdb;box-shadow:inset 4px 0 var(--green)}.edit-button,.sync-button{border-color:#9fc7df;color:var(--green);background:var(--mint)}
 .master-tools{border-color:#9fc7df;background:linear-gradient(120deg,#eaf4fb,#fffdf7);box-shadow:0 8px 25px rgba(6,27,53,.08)}.master-tools-copy span{color:var(--green)}.master-tools .secondary-sync{color:var(--green);border-color:#9fc7df}.save-result,.message{color:var(--green);background:#eaf4fb;border-color:#b8d5e8}.save-result a{background:#0c4f8b}.site-footer{padding:30px 20px;color:rgba(255,255,255,.72);background:#061b35;text-align:center;font-size:12px}
 @media(max-width:600px){.school-strip{justify-content:center;text-align:center}.school-strip>span{display:none}.topbar{height:78px;padding-inline:14px}.hero{padding:38px 22px}.site-footer{margin-top:15px}}
+
+.master-tools .sync-actions .sync-button{min-height:48px;font-size:14px!important;font-weight:800;color:#fff!important;background:#0c4f8b!important;opacity:1}.master-tools .sync-actions .secondary-sync{color:#061b35!important;border:1px solid #d5a93f!important;background:#f4d981!important}.master-tools .sync-actions .sync-button:disabled{opacity:.72}
+@media(max-width:600px){
+  main{width:calc(100% - 24px)}
+  .tabs{gap:0;margin-inline:-2px}.tabs button{flex:1;padding:13px 8px;font-size:12px;text-align:center}.tabs button[data-tab="register"]{min-width:132px}
+  #register{width:100%;max-width:none;padding-bottom:32px}.heading{align-items:flex-start}.heading p{font-size:14px;line-height:1.45}
+  #register .form-card{width:100%;gap:15px;padding:16px;border-radius:17px;box-shadow:0 12px 32px rgba(6,27,53,.09)}
+  #register .form-card label{gap:8px;font-size:13px}#register input,#register select,#register textarea{min-height:50px;padding:13px 12px;border-radius:10px;font-size:16px}#register textarea{min-height:112px;resize:vertical}
+  #register .selected{align-items:flex-start;padding:13px}#register .selected span{line-height:1.45}#register .primary{min-height:54px;font-size:15px}
+  .master-tools{padding:17px 15px}.master-tools-copy p{font-size:13px;line-height:1.45}.master-tools .sync-actions .sync-button{width:100%;font-size:14px!important}
+}
