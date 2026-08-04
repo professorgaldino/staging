@@ -1,0 +1,4840 @@
+{
+  "1": {
+    "numero": 1,
+    "nome": "ANA CLARA FERREIRA DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 43
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 43,
+      "frequencia": 91,
+      "faltas_anual": 70,
+      "frequencia_anual": 90
+    }
+  },
+  "2": {
+    "numero": 2,
+    "nome": "ANA LAURA MANOEL",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 4,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 4,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 41
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 41,
+      "frequencia": 91,
+      "faltas_anual": 86,
+      "frequencia_anual": 87
+    }
+  },
+  "3": {
+    "numero": 3,
+    "nome": "CARLOS HENRIQUE DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 20,
+      "frequencia": 96,
+      "faltas_anual": 58,
+      "frequencia_anual": 91
+    }
+  },
+  "4": {
+    "numero": 4,
+    "nome": "DEYVID FELIPE DE OLIVEIRA MACHARET DO NASCIMENTO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 7,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 3,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 73
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 73,
+      "frequencia": 85,
+      "faltas_anual": 110,
+      "frequencia_anual": 84
+    }
+  },
+  "5": {
+    "numero": 5,
+    "nome": "EDUARDO MIGUEL BACARIM DOS SANTOS EURINIDIO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 10,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 11,
+      "frequencia": 98,
+      "faltas_anual": 57,
+      "frequencia_anual": 92
+    }
+  },
+  "6": {
+    "numero": 6,
+    "nome": "ELOAH HADASSA FERREIRA PENTEADO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 2,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 7,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 3,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 6,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 4,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 11,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 4,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 79
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 79,
+      "frequencia": 84,
+      "faltas_anual": 111,
+      "frequencia_anual": 84
+    }
+  },
+  "7": {
+    "numero": 7,
+    "nome": "EMANUELLY SILVA VIEIRA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 11,
+      "frequencia": 98,
+      "faltas_anual": 40,
+      "frequencia_anual": 94
+    }
+  },
+  "8": {
+    "numero": 8,
+    "nome": "EMILLY GÓES ANACLETO",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 2,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 2,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 2,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 21,
+      "frequencia": 96,
+      "faltas_anual": 57,
+      "frequencia_anual": 92
+    }
+  },
+  "9": {
+    "numero": 9,
+    "nome": "ENZO HENRIQUE DA SILVA ANDRADE",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 9,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 19,
+      "frequencia": 96,
+      "faltas_anual": 39,
+      "frequencia_anual": 94
+    }
+  },
+  "10": {
+    "numero": 10,
+    "nome": "FLAVIA EMANUELLY DE OLIVEIRA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 10
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 35,
+      "frequencia_anual": 95
+    }
+  },
+  "11": {
+    "numero": 11,
+    "nome": "GABRIELA VITORIA DOS SANTOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 37
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 37,
+      "frequencia": 92,
+      "faltas_anual": 56,
+      "frequencia_anual": 92
+    }
+  },
+  "12": {
+    "numero": 12,
+    "nome": "GIOVANA GABRIELLA PEROCCI OTI",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 6,
+      "frequencia": 99,
+      "faltas_anual": 24,
+      "frequencia_anual": 96
+    }
+  },
+  "13": {
+    "numero": 13,
+    "nome": "HELOISA SOUZA SANTOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 18
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 18,
+      "frequencia": 96,
+      "faltas_anual": 32,
+      "frequencia_anual": 95
+    }
+  },
+  "14": {
+    "numero": 14,
+    "nome": "JOAO HENRIQUE BARBOSA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 10,
+      "frequencia": 98,
+      "faltas_anual": 18,
+      "frequencia_anual": 97
+    }
+  },
+  "15": {
+    "numero": 15,
+    "nome": "JOÃO LUCAS RODRIGUES DE FREITAS",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 15
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 9,
+      "frequencia_anual": 99
+    }
+  },
+  "16": {
+    "numero": 16,
+    "nome": "JONNAS GABRIEL DE PAULA LIMA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 22,
+      "frequencia": 95,
+      "faltas_anual": 39,
+      "frequencia_anual": 94
+    }
+  },
+  "17": {
+    "numero": 17,
+    "nome": "JORGE LOURENÇO FERREIRA DA SILVA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 17
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 0,
+      "frequencia_anual": 100
+    }
+  },
+  "18": {
+    "numero": 18,
+    "nome": "JULIA MARA DE MELO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 11,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 66
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 66,
+      "frequencia": 86,
+      "faltas_anual": 119,
+      "frequencia_anual": 82
+    }
+  },
+  "19": {
+    "numero": 19,
+    "nome": "KAUÃ LEMES NASCIMENTO DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 9,
+      "frequencia": 98,
+      "faltas_anual": 16,
+      "frequencia_anual": 98
+    }
+  },
+  "20": {
+    "numero": 20,
+    "nome": "KAUAN GEREMIAS SILVÉRIO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 4,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 31
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 31,
+      "frequencia": 94,
+      "faltas_anual": 42,
+      "frequencia_anual": 94
+    }
+  },
+  "21": {
+    "numero": 21,
+    "nome": "KENNEDY EFRAIM NASCIMENTO FILHO",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 1,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 1,
+        "media": 14,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 1,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 80
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 80,
+      "frequencia": 83,
+      "faltas_anual": 90,
+      "frequencia_anual": 87
+    }
+  },
+  "22": {
+    "numero": 22,
+    "nome": "KÉTLYN VITÓRIA PORFÍRIO CARVALHO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 8,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 45
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 45,
+      "frequencia": 91,
+      "faltas_anual": 85,
+      "frequencia_anual": 87
+    }
+  },
+  "23": {
+    "numero": 23,
+    "nome": "LARA GONÇALVES",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 10,
+      "frequencia": 98,
+      "faltas_anual": 12,
+      "frequencia_anual": 98
+    }
+  },
+  "24": {
+    "numero": 24,
+    "nome": "LEVY DOMINGUES COELHO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 7,
+      "frequencia_anual": 99
+    }
+  },
+  "25": {
+    "numero": 25,
+    "nome": "LILAH AUREA ANDRÉ REIS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 3,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 26,
+      "frequencia": 95,
+      "faltas_anual": 34,
+      "frequencia_anual": 95
+    }
+  },
+  "26": {
+    "numero": 26,
+    "nome": "LORENA VITORIA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 4,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 38
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 38,
+      "frequencia": 92,
+      "faltas_anual": 97,
+      "frequencia_anual": 86
+    }
+  },
+  "27": {
+    "numero": 27,
+    "nome": "LORRANY BEATRIZ BARBOSA BATISTA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 8,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 30
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 30,
+      "frequencia": 94,
+      "faltas_anual": 96,
+      "frequencia_anual": 86
+    }
+  },
+  "28": {
+    "numero": 28,
+    "nome": "LUAN BARRETO DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 1,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 3,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 2,
+        "media": 9,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 3,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 3,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 15,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 3,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 3,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 83
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 83,
+      "frequencia": 83,
+      "faltas_anual": 112,
+      "frequencia_anual": 83
+    }
+  },
+  "29": {
+    "numero": 29,
+    "nome": "MARCELA LAÍS DE MELO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 9,
+      "frequencia": 98,
+      "faltas_anual": 12,
+      "frequencia_anual": 98
+    }
+  },
+  "30": {
+    "numero": 30,
+    "nome": "MARIA IZABELLA MARQUES DE OLIVEIRA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 7,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 3,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 3,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 2,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 30
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 40
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 40,
+      "frequencia": 92,
+      "faltas_anual": 72,
+      "frequencia_anual": 89
+    }
+  },
+  "31": {
+    "numero": 31,
+    "nome": "NICOLLY PEREIRA DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 31
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 8,
+      "frequencia": 98,
+      "faltas_anual": 32,
+      "frequencia_anual": 95
+    }
+  },
+  "32": {
+    "numero": 32,
+    "nome": "OTÁVIO CANDIDO DE ANDRADE",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 32
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 38
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 38,
+      "frequencia": 92,
+      "faltas_anual": 74,
+      "frequencia_anual": 89
+    }
+  },
+  "33": {
+    "numero": 33,
+    "nome": "RICHARD GUILHERME GERMANO DO PRADO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 2,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 22
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 22,
+      "frequencia": 95,
+      "faltas_anual": 48,
+      "frequencia_anual": 93
+    }
+  },
+  "34": {
+    "numero": 34,
+    "nome": "SAMUEL DAVI FERREIRA DE SENA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 3,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 15,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 34
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 52
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 52,
+      "frequencia": 89,
+      "faltas_anual": 100,
+      "frequencia_anual": 85
+    }
+  },
+  "35": {
+    "numero": 35,
+    "nome": "VALENTINA MARIANO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 7,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 9,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 35
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 68
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 68,
+      "frequencia": 86,
+      "faltas_anual": 130,
+      "frequencia_anual": 81
+    }
+  },
+  "36": {
+    "numero": 36,
+    "nome": "VITÓRIA EMANUELE APARECIDA VICENTE",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 4,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 36
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 22
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 22,
+      "frequencia": 95,
+      "faltas_anual": 57,
+      "frequencia_anual": 92
+    }
+  },
+  "37": {
+    "numero": 37,
+    "nome": "YASMIM VITÓRIA VICENTE",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 37
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 23,
+      "frequencia_anual": 97
+    }
+  },
+  "38": {
+    "numero": 38,
+    "nome": "YURI MIGUEL MOREIRA MARTINS DOS SANTOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 8,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 8,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 9,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 8,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 38
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 41,
+      "frequencia": 91,
+      "faltas_anual": 67,
+      "frequencia_anual": 90
+    }
+  },
+  "39": {
+    "numero": 39,
+    "nome": "DANIEL SADRAQUE MOREIRA BOMFIM",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 39
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 33
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 33,
+      "frequencia": 93,
+      "faltas_anual": 33,
+      "frequencia_anual": 90
+    }
+  },
+  "40": {
+    "numero": 40,
+    "nome": "SAMUEL MESAQUE MOREIRA BOMFIM",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 40
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 25
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 25,
+      "frequencia": 95,
+      "faltas_anual": 25,
+      "frequencia_anual": 92
+    }
+  },
+  "41": {
+    "numero": 41,
+    "nome": "MARIA LUIZA FONTES SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "ARTE": {
+        "codigo": 1813,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "CIENCIAS": {
+        "codigo": 8468,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "EDUCAÇAO_FINANCEIRA": {
+        "codigo": 52000,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "GEOGRAFIA": {
+        "codigo": 2100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "LINGUA_INGLESA": {
+        "codigo": 8467,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 41
+      },
+      "TECNOLOGIA_E_INOVACAO": {
+        "codigo": 8466,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 6,
+      "frequencia": 99,
+      "faltas_anual": 6,
+      "frequencia_anual": 98
+    }
+  }
+}

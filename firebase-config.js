@@ -9,3 +9,6 @@ export const firebaseConfig = {
 
 // Web App legado que entrega o histórico de ocorrências da planilha.
 export const occurrencesSyncUrl = "https://script.google.com/macros/s/AKfycbxumXT10my5xZQL0_BeeC3NRtDCFSK1-dWYMk3qLQEuPDqDkAoGvLZjvZ4S7t6r9trj/exec?action=consultar";
+
+// Catálogo legado usado somente para recuperar os IDs das fotos armazenadas no Drive.
+export const studentsPhotoSyncUrl = "https://script.google.com/macros/s/AKfycbzMz2KkT2rF4pFG5skyztvtHHVms1LMXfGjLMWj2chY-zYbPPqN3PpHLknqE7Rj651Cjw/exec";

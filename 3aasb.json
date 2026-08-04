@@ -1,0 +1,3627 @@
+{
+  "1": {
+    "numero": 1,
+    "nome": "ALLYSON ARAUJO DE LIRA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 12
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 12,
+      "frequencia": 97,
+      "faltas_anual": 25,
+      "frequencia_anual": 96
+    }
+  },
+  "2": {
+    "numero": 2,
+    "nome": "ANA LIVIA DA SILVA COSTA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 2,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 3,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 3,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 2,
+        "media": 14,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 5,
+        "media": 18,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 2,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 2
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 12,
+        "faltas": 7,
+        "acumulado": 114
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 114,
+      "frequencia": 68,
+      "faltas_anual": 115,
+      "frequencia_anual": 83
+    }
+  },
+  "3": {
+    "numero": 3,
+    "nome": "BEATRIZ GOMES TRINDADE",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 3
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 1,
+      "frequencia_anual": 100
+    }
+  },
+  "4": {
+    "numero": 4,
+    "nome": "BRAYAN LOURENÇO VIEIRA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 4
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 6,
+      "frequencia_anual": 99
+    }
+  },
+  "5": {
+    "numero": 5,
+    "nome": "DANILO DE SOUZA AQUINO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 4
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 4,
+      "frequencia": 99,
+      "faltas_anual": 6,
+      "frequencia_anual": 99
+    }
+  },
+  "6": {
+    "numero": 6,
+    "nome": "DAVI EDUARDO ALBORGHETTI",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 6
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 19,
+      "frequencia": 95,
+      "faltas_anual": 47,
+      "frequencia_anual": 93
+    }
+  },
+  "7": {
+    "numero": 7,
+    "nome": "DAYARA LETÍCIA TRIANI MOREIRA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 7
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 7
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 56,
+      "frequencia_anual": 92
+    }
+  },
+  "8": {
+    "numero": 8,
+    "nome": "EMANUELLE LIMA GAMA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 3,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 1,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 2,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 8
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 8,
+      "frequencia_anual": 99
+    }
+  },
+  "9": {
+    "numero": 9,
+    "nome": "GABRIELA ALVES",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 9
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 9
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 39,
+      "frequencia_anual": 94
+    }
+  },
+  "10": {
+    "numero": 10,
+    "nome": "GABRIELA VITORIA SANDRÉ",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 10
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 19,
+      "frequencia": 95,
+      "faltas_anual": 24,
+      "frequencia_anual": 97
+    }
+  },
+  "11": {
+    "numero": 11,
+    "nome": "GABRIELLE FERNANDA DA SILVA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 11
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 11
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 3,
+      "frequencia_anual": 100
+    }
+  },
+  "12": {
+    "numero": 12,
+    "nome": "GABRIELLE FERNANDA DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 7,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 13,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 5,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 8,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 12
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 83
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 83,
+      "frequencia": 77,
+      "faltas_anual": 136,
+      "frequencia_anual": 80
+    }
+  },
+  "13": {
+    "numero": 13,
+    "nome": "HENZO URIEL AQUINO DE MELO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 13
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 15
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 15,
+      "frequencia": 96,
+      "faltas_anual": 25,
+      "frequencia_anual": 96
+    }
+  },
+  "14": {
+    "numero": 14,
+    "nome": "JHENIFFER LUIZA AMISS DELFINO",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 14
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 14
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 52,
+      "frequencia_anual": 92
+    }
+  },
+  "15": {
+    "numero": 15,
+    "nome": "JOAO PEDRO POLI RAMOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 7,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 15
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 7
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 7,
+      "frequencia": 98,
+      "faltas_anual": 16,
+      "frequencia_anual": 98
+    }
+  },
+  "16": {
+    "numero": 16,
+    "nome": "KETHELIN CRISTINA FERREIRA PIRES",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 7,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 7,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 16
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 35
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 35,
+      "frequencia": 90,
+      "faltas_anual": 67,
+      "frequencia_anual": 90
+    }
+  },
+  "17": {
+    "numero": 17,
+    "nome": "LAYSLA VICTORIA FLOZINO",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 17
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 17
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 0,
+      "frequencia_anual": 100
+    }
+  },
+  "18": {
+    "numero": 18,
+    "nome": "LISSANDA PIERRE LOUIS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 2
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 2,
+      "frequencia": 99,
+      "faltas_anual": 2,
+      "frequencia_anual": 100
+    }
+  },
+  "19": {
+    "numero": 19,
+    "nome": "LUCAS VINICIUS DOS SANTOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 19
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 18
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 18,
+      "frequencia": 95,
+      "faltas_anual": 52,
+      "frequencia_anual": 92
+    }
+  },
+  "20": {
+    "numero": 20,
+    "nome": "MARIA CLARA DE OLIVEIRA SANTOS",
+    "situacao": "Não Comparecimento",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 3,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 2,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 3,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 1,
+        "media": 13,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 1,
+        "media": 16,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 4,
+        "media": 14,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 28,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 2,
+        "media": 20,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 13,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 2,
+        "media": 14,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 2,
+        "media": 19,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 20
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 209
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 209,
+      "frequencia": 42,
+      "faltas_anual": 225,
+      "frequencia_anual": 67
+    }
+  },
+  "21": {
+    "numero": 21,
+    "nome": "MATEUS DE OLIVEIRA ZALATIN",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 8,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 4,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 4,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 4,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 20,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 21
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 5,
+        "media": 8,
+        "faltas": 3,
+        "acumulado": 78
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 78,
+      "frequencia": 78,
+      "faltas_anual": 135,
+      "frequencia_anual": 80
+    }
+  },
+  "22": {
+    "numero": 22,
+    "nome": "MIQUÉIAS YBRAIM DE SOUZA",
+    "situacao": "Não Comparecimento",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 4,
+        "media": 7,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 2,
+        "media": 10,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 7,
+        "media": 5,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 7,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 1,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 17,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 2,
+        "media": 16,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 3,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 2,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 4,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 22
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 8,
+        "faltas": 0,
+        "acumulado": 137
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 137,
+      "frequencia": 62,
+      "faltas_anual": 161,
+      "frequencia_anual": 77
+    }
+  },
+  "23": {
+    "numero": 23,
+    "nome": "NATHALLY ALVES DE OLIVEIRA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 4,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 7,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 6,
+        "media": 3,
+        "faltas": 0,
+        "acumulado": 23
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 32
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 32,
+      "frequencia": 91,
+      "faltas_anual": 64,
+      "frequencia_anual": 91
+    }
+  },
+  "24": {
+    "numero": 24,
+    "nome": "PABLO GABRIEL DA SILVA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 10,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 24
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 1
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 1,
+      "frequencia": 100,
+      "faltas_anual": 6,
+      "frequencia_anual": 99
+    }
+  },
+  "25": {
+    "numero": 25,
+    "nome": "PEDRO HENRIQUE PEREIRA MONARO",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 4,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 25
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 10,
+      "frequencia_anual": 99
+    }
+  },
+  "26": {
+    "numero": 26,
+    "nome": "RENAN ALVES PEREIRA",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 3,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 5,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 6,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 5,
+        "media": 12,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 4,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 9,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 5,
+        "media": 4,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 5,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 26
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 6,
+        "media": 6,
+        "faltas": 0,
+        "acumulado": 62
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 62,
+      "frequencia": 83,
+      "faltas_anual": 81,
+      "frequencia_anual": 88
+    }
+  },
+  "27": {
+    "numero": 27,
+    "nome": "SAMUEL LEANDRO APARECIDO DOS SANTOS",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": 9,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": 5,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": 6,
+        "media": 2,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": 6,
+        "media": 1,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": 6,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": 8,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 27
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": 7,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 5
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 5,
+      "frequencia": 99,
+      "faltas_anual": 36,
+      "frequencia_anual": 95
+    }
+  },
+  "28": {
+    "numero": 28,
+    "nome": "SOPHIA SERAPHIM LIMA",
+    "situacao": "Transferido",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 28
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 28
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 10,
+      "frequencia_anual": 98
+    }
+  },
+  "29": {
+    "numero": 29,
+    "nome": "GABRIELA ALVES",
+    "situacao": "Ativo",
+    "disciplinas": {
+      "APROFUNDAMENTO_DE_BIOLOGIA": {
+        "codigo": 9917,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "APROFUNDAMENTO_DE_QUIMICA": {
+        "codigo": 9918,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "EDUCACAO_FISICA": {
+        "codigo": 1900,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ELETIVAS": {
+        "codigo": 8465,
+        "numero": null,
+        "media": null,
+        "faltas": null,
+        "acumulado": 29
+      },
+      "Empreendedorismo": {
+        "codigo": 50424,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "FISICA": {
+        "codigo": 2600,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "HISTORIA": {
+        "codigo": 2200,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "INGLES": {
+        "codigo": 52005,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "LINGUA_PORTUGUESA": {
+        "codigo": 1100,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "MATEMATICA": {
+        "codigo": 2700,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_LINGUA_PORTUGUESA": {
+        "codigo": 55208,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "ORIENTAÇAO_DE_ESTUDO_-_MATEMATICA": {
+        "codigo": 55207,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "PRATICAS_EXPERIMENTAIS": {
+        "codigo": 52007,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "PROGRAMACAO": {
+        "codigo": 55204,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "PROJETO_DE_VIDA": {
+        "codigo": 8441,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 29
+      },
+      "REDAÇAO_E_LEITURA": {
+        "codigo": 52001,
+        "numero": null,
+        "media": 0,
+        "faltas": 0,
+        "acumulado": 0
+      }
+    },
+    "totais": {
+      "faltas_acumuladas": 0,
+      "frequencia": 100,
+      "faltas_anual": 0,
+      "frequencia_anual": 100
+    }
+  }
+}
