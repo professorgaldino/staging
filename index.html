@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0c5f55">
+  <meta name="theme-color" content="#061b35">
   <title>Villani 2.0 — Central do Aluno</title>
   <meta name="description" content="Consulta de alunos, ocorrências e boletins.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260803-16">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260803-18">
 </head>
 <body>
+  <div class="school-strip"><span>Educação, conhecimento e transformação</span><b>Escola Ouro 2024 • Escola Diamante 2025</b></div>
   <header class="topbar">
     <a class="brand" href="#"><span>V</span><div><b>Villani 2.0</b><small>Central do aluno</small></div></a>
     <div class="top-actions"><div class="connection"><i></i><span id="connectionText">Conectando à base...</span></div><button id="masterButton" class="master-button">Acesso master</button></div>
@@ -19,14 +20,13 @@
 
   <main>
     <section class="hero">
-      <div><small>GESTÃO ESCOLAR INTEGRADA</small><h1>Uma visão completa<br>de cada aluno.</h1><p>Cadastro, ocorrências e boletim conectados em uma experiência simples e responsiva.</p></div>
+      <div><small>GESTÃO ESCOLAR INTEGRADA</small><h1>Uma visão completa<br>de cada aluno.</h1><p>Cadastro e ocorrências conectados em uma experiência simples e responsiva.</p></div>
       <div class="hero-number"><span>Alunos ativos</span><strong id="studentCount">—</strong><small id="classCount">Carregando turmas</small></div>
     </section>
 
     <nav class="tabs" aria-label="Seções">
       <button class="active" data-tab="students">Alunos</button>
       <button data-tab="occurrences">Ocorrências</button>
-      <button data-tab="report">Boletim</button>
       <button data-tab="register">+ Fazer ocorrência</button>
     </nav>
 
@@ -34,7 +34,7 @@
 
     <section id="masterTools" class="master-tools" hidden>
       <div class="master-tools-icon">↻</div>
-      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização com as planilhas</h2><p>Alunos ativos diretamente das 19 abas SIGFRE/SICE e histórico de ocorrências no Firebase.</p><span id="lastSyncText">Nenhuma sincronização de alunos localizada.</span><span id="lastOccurrenceSyncText">Nenhuma sincronização de ocorrências localizada.</span></div>
+      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização com as planilhas</h2><p>Alunos ativos diretamente das 18 abas SIGFRE/SICE e histórico de ocorrências no banco de dados.</p><span id="lastSyncText">Nenhuma sincronização de alunos localizada.</span><span id="lastOccurrenceSyncText">Nenhuma sincronização de ocorrências localizada.</span></div>
       <div class="sync-actions"><button id="syncStudentsButton" class="sync-button">Sincronizar alunos</button><button id="syncOccurrencesButton" class="sync-button secondary-sync">Sincronizar ocorrências</button></div>
     </section>
 
@@ -51,13 +51,8 @@
       <div class="pagination"><button id="previousOccurrence" disabled>Anterior</button><span id="occurrencePage">Página 1</span><button id="nextOccurrence" disabled>Próxima</button></div>
     </section>
 
-    <section id="report" class="view">
-      <div class="heading"><div><small>ARQUIVOS JSON</small><h2>Boletim do aluno</h2></div><div class="heading-selects"><select id="reportClass"><option value="">Turma</option></select><select id="reportStudent" disabled><option value="">Selecione um aluno</option></select></div></div>
-      <div id="reportContent" class="empty">Selecione um aluno para consultar os arquivos de boletim.</div>
-    </section>
-
     <section id="register" class="view narrow">
-      <div class="heading"><div><small>GRAVAÇÃO NO FIREBASE</small><h2>Nova ocorrência</h2><p>O registro ficará vinculado ao histórico do aluno.</p></div></div>
+      <div class="heading"><div><small>GRAVAÇÃO NO BANCO DE DADOS</small><h2>Nova ocorrência</h2><p>O registro ficará vinculado ao histórico do aluno.</p></div></div>
       <form id="occurrenceForm" class="form-card">
         <label>Turma<select id="formClass" required><option value="">Selecione a turma</option></select></label>
         <label>Aluno<select id="formStudent" required disabled><option value="">Selecione o aluno</option></select></label>
@@ -69,7 +64,7 @@
         <label class="full">Descrição<textarea id="description" rows="5" required placeholder="Descreva objetivamente o ocorrido..."></textarea></label>
         <label class="full">Ação tomada<textarea id="actionTaken" rows="3"></textarea></label>
         <div id="saveResult" class="save-result full" hidden></div>
-        <button id="saveButton" class="primary full" type="submit">Salvar ocorrência no Firebase</button>
+        <button id="saveButton" class="primary full" type="submit">Salvar ocorrência no banco de dados</button>
       </form>
     </section>
   </main>
@@ -78,7 +73,7 @@
   <dialog id="masterDialog" class="modal-card">
     <button class="dialog-close" type="button" aria-label="Fechar">×</button>
     <form id="masterForm">
-      <span class="modal-icon">F</span><small>ACESSO EXCLUSIVO</small><h2>Área master</h2><p>Entre para editar ou apagar ocorrências gravadas no Firebase.</p>
+      <span class="modal-icon">M</span><small>ACESSO EXCLUSIVO</small><h2>Área master</h2><p>Entre para editar ou apagar ocorrências gravadas no banco de dados.</p>
       <label>Usuário<input id="masterUser" autocomplete="username" value="fernando" required></label>
       <label>Senha<input id="masterPassword" type="password" autocomplete="current-password" required></label>
       <div id="masterError" class="modal-error" hidden></div>
@@ -99,6 +94,7 @@
       <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
     </form>
   </dialog>
-  <script type="module" src="app.js?v=20260803-16"></script>
+  <footer class="site-footer">© 2026 E.E. Therezinha Villani • Gestão escolar integrada</footer>
+  <script type="module" src="app.js?v=20260803-18"></script>
 </body>
 </html>
