@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInAnonymously, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 import { collection, deleteDoc, doc, getCountFromServer, getDoc, getDocs, getFirestore, limit, orderBy, query, serverTimestamp, setDoc, startAfter, Timestamp, updateDoc, where, writeBatch } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
-import { firebaseConfig, occurrencesSyncUrl, studentsSyncUrl } from "./firebase-config.js?v=20260803-5";
+import { firebaseConfig, occurrencesSyncUrl, studentsSyncUrl } from "./firebase-config.js?v=20260803-6";
 
 const CLASSES=["6A","6B","6C","7A","7B","7C","8A","8B","8C","9A","9B","9C","1A","1B","1C","1D","2A","2B","3A"];
 const PAGE_SIZE=5;
@@ -113,9 +113,11 @@ $("#syncStudentsButton").onclick=async()=>{
 };
 $("#syncOccurrencesButton").onclick=async()=>{
   if(!state.isMaster||!confirm("Importar e atualizar no Firebase as ocorrências antigas da planilha?"))return;
-  const button=$("#syncOccurrencesButton");button.disabled=true;button.textContent="Sincronizando...";$("#connectionText").textContent="Atualizando ocorrências";
+  const button=$("#syncOccurrencesButton");let syncStage="renovar a credencial master";button.disabled=true;button.textContent="Sincronizando...";$("#connectionText").textContent="Atualizando ocorrências";
   try{
+    await auth.currentUser.getIdToken(true);syncStage="baixar as ocorrências do Apps Script";
     const response=await fetch(occurrencesSyncUrl,{cache:"no-store"});if(!response.ok)throw new Error("HTTP "+response.status);const raw=extractArray(await response.json());if(!raw.length)throw new Error("Base de ocorrências vazia");
+    syncStage="carregar o índice de alunos";
     const indexSnapshot=await getDoc(doc(db,"settings","student-index")),byRa=new Map(),byName=new Map(),indexedStudents=Object.values(indexSnapshot.data()?.students||{});
     if(indexedStudents.length)indexedStudents.forEach(student=>{byRa.set(normalizeRa(student.ra),student);byName.set(normalize(student.name),student)});else{const studentsSnapshot=await getDocs(collection(db,"students"));studentsSnapshot.docs.forEach((entry,index)=>{const student=adaptStudent({id:entry.id,...entry.data()},index);if(normalizeRa(student.ra))byRa.set(normalizeRa(student.ra),student);if(normalize(student.name))byName.set(normalize(student.name),student)})}
     const prepared=new Map();
@@ -126,10 +128,11 @@ $("#syncOccurrencesButton").onclick=async()=>{
       const id=await occurrenceId(item.studentRa,item.eventDate,item.eventTime,item.description),registeredAt=field(source,["dataRegistro","Data Registro","createdAt"]);
       prepared.set(id,{id,data:{studentId:item.studentId,studentRa:item.studentRa,studentName:item.studentName,classId:item.classId,tutor:item.tutor,eventDate:item.eventDate,eventTime:item.eventTime,category:item.category,description:item.description,teacher:item.teacher,actionTaken:item.actionTaken,createdAt:occurrenceTimestamp(registeredAt||item.eventDate),source:"google-sheets",syncedAt:serverTimestamp()}})
     }
-    const importOperations=[...prepared.values()].map(item=>({type:"set",ref:doc(db,"occurrences",item.id),data:item.data,options:{merge:true}}));await commitOperations(importOperations);const written=prepared.size;
+    syncStage="gravar "+prepared.size+" ocorrências no Firestore";const importOperations=[...prepared.values()].map(item=>({type:"set",ref:doc(db,"occurrences",item.id),data:item.data,options:{merge:true}}));await commitOperations(importOperations);const written=prepared.size;
+    syncStage="salvar o resumo da sincronização";
     await setDoc(doc(db,"settings","occurrences-sync"),{records:written,sourceUrl:occurrencesSyncUrl,syncedAt:serverTimestamp(),syncedBy:"fernando@villani.app",deduplication:"deterministic-id"},{merge:true});
     state.occurrencePages=[];await resetOccurrencePagination();$("#connectionText").textContent="Ocorrências atualizadas";$("#lastOccurrenceSyncText").textContent="Ocorrências: concluída agora · "+written+" registros da planilha.";message(written+" ocorrências únicas sincronizadas sem varrer toda a coleção.")
-  }catch(error){console.error(error);$("#connectionText").textContent="Falha na sincronização";message("Não foi possível importar as ocorrências. Confirme se o Apps Script antigo continua publicado para qualquer pessoa.",true)}finally{button.disabled=false;button.textContent="Sincronizar ocorrências"}
+  }catch(error){console.error("Falha ao "+syncStage,error);$("#connectionText").textContent="Falha na sincronização";const detail=[error.code,error.message].filter(Boolean).join(" — ");message("Falha ao "+syncStage+(detail?": "+detail:"")+".",true)}finally{button.disabled=false;button.textContent="Sincronizar ocorrências"}
 };
 $("#masterForm").onsubmit=async event=>{event.preventDefault();const error=$("#masterError"),button=event.submitter;error.hidden=true;button.disabled=true;button.textContent="Entrando...";try{if(normalize($("#masterUser").value)!=="fernando")throw new Error();await signOut(auth);await signInWithEmailAndPassword(auth,"fernando@villani.app",$("#masterPassword").value);$("#masterDialog").close();message("Modo master ativado.");openTab("occurrences");resetOccurrencePagination()}catch{error.textContent="Usuário ou senha incorretos.";error.hidden=false;try{await signInAnonymously(auth)}catch{}}finally{button.disabled=false;button.textContent="Entrar como Fernando"}};
 $("#editForm").onsubmit=async event=>{event.preventDefault();if(!state.isMaster)return;const button=event.submitter,id=$("#editId").value;button.disabled=true;try{await updateDoc(doc(db,"occurrences",id),{eventDate:$("#editDate").value,eventTime:$("#editTime").value,category:$("#editCategory").value,teacher:$("#editTeacher").value.trim(),description:$("#editDescription").value.trim(),actionTaken:$("#editAction").value.trim(),updatedAt:serverTimestamp(),updatedBy:"fernando@villani.app"});$("#editDialog").close();message("Ocorrência atualizada.");resetOccurrencePagination()}catch(error){console.error(error);message("Não foi possível editar.",true)}finally{button.disabled=false}};
