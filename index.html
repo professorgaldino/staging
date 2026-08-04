@@ -9,12 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260803-19">
+  <link rel="stylesheet" href="styles.css?v=20260803-20">
 </head>
 <body>
   <div class="school-strip"><span>Educação, conhecimento e transformação</span><b>Escola Ouro 2024 • Escola Diamante 2025</b></div>
   <header class="topbar">
-    <a class="brand" href="#"><span>V</span><div><b>Villani 2.0</b><small></small></div></a>
+    <a class="brand" href="#"><span>V</span><div><b>Villani 2.0</b><small>Central do aluno</small></div></a>
     <div class="top-actions"><div class="connection"><i></i><span id="connectionText">Conectando à base...</span></div><button id="masterButton" class="master-button">Acesso master</button></div>
   </header>
 
@@ -25,9 +25,9 @@
     </section>
 
     <nav class="tabs" aria-label="Seções">
-      <button class="active" data-tab="students">Ver Alunos</button>
-      <button data-tab="occurrences">Ocorrências</button>
-      <button data-tab="register">+ Fazer ocorrência</button>
+      <button class="active" data-tab="register">+ Fazer ocorrência</button>
+      <button data-tab="occurrences">Histórico de ocorrências</button>
+      <button data-tab="students">Ver alunos</button>
     </nav>
 
     <div id="message" class="message" hidden></div>
@@ -38,20 +38,20 @@
       <div class="sync-actions"><button id="syncStudentsButton" class="sync-button">Sincronizar alunos</button><button id="syncOccurrencesButton" class="sync-button secondary-sync">Sincronizar ocorrências</button></div>
     </section>
 
-    <section id="students" class="view active">
+    <section id="students" class="view">
       <div class="heading"><div><small>BASE SINCRONIZADA</small><h2>Consulta de alunos</h2></div><b id="resultCount">0 resultados</b></div>
       <div class="filters"><select id="classFilter" aria-label="Turma"><option value="">Selecione uma turma</option></select><label class="search"><span>⌕</span><input id="studentSearch" type="search" placeholder="Pesquisar nome ou RA" disabled></label></div>
       <div id="studentGrid" class="student-grid"><div class="empty">Selecione uma turma para carregar somente os alunos solicitados.</div></div>
     </section>
 
     <section id="occurrences" class="view">
-      <div class="heading"><div><small>HISTÓRICO UNIFICADO</small><h2>Consulta de ocorrências</h2></div><b id="occurrenceCount">0 registros</b></div>
+      <div class="heading"><div><small>HISTÓRICO UNIFICADO</small><h2>Histórico de ocorrências</h2></div><b id="occurrenceCount">0 registros</b></div>
       <div class="filters occurrence-filters"><select id="occurrenceClass"><option value="">Todas as turmas</option></select><select id="occurrenceStudent" disabled><option value="">Todos os alunos</option></select><div class="occurrence-name-search"><label class="search"><span>⌕</span><input id="occurrenceSearch" type="search" placeholder="Pesquisar aluno em todas as turmas" autocomplete="off"></label><div id="occurrenceSearchResults" class="search-results" hidden></div></div><input id="dateFrom" type="date" aria-label="Data inicial"><input id="dateTo" type="date" aria-label="Data final"></div>
       <div id="occurrenceList" class="timeline"></div>
       <div class="pagination"><button id="previousOccurrence" disabled>Anterior</button><span id="occurrencePage">Página 1</span><button id="nextOccurrence" disabled>Próxima</button></div>
     </section>
 
-    <section id="register" class="view narrow">
+    <section id="register" class="view narrow active">
       <div class="heading"><div><small>GRAVAÇÃO NO BANCO DE DADOS</small><h2>Nova ocorrência</h2><p>O registro ficará vinculado ao histórico do aluno.</p></div></div>
       <form id="occurrenceForm" class="form-card">
         <label>Turma<select id="formClass" required><option value="">Selecione a turma</option></select></label>
@@ -59,8 +59,7 @@
         <div id="selectedStudent" class="selected full" hidden></div>
         <label>Data do fato<input id="eventDate" type="date" required></label>
         <label>Horário<input id="eventTime" type="time"></label>
-        <label>Categoria<select id="category"><option>Pedagógica</option><option>Comportamental</option><option>Convivência</option><option>Saúde</option><option>Administrativa</option></select></label>
-        <label>Professor / responsável<input id="teacher" autocomplete="name"></label>
+        <label class="full">Professor / responsável<input id="teacher" autocomplete="name"></label>
         <label class="full">Descrição<textarea id="description" rows="5" required placeholder="Descreva objetivamente o ocorrido..."></textarea></label>
         <label class="full">Ação tomada<textarea id="actionTaken" rows="3"></textarea></label>
         <div id="saveResult" class="save-result full" hidden></div>
@@ -86,14 +85,13 @@
       <input id="editId" type="hidden">
       <label>Data do fato<input id="editDate" type="date" required></label>
       <label>Horário<input id="editTime" type="time"></label>
-      <label>Categoria<select id="editCategory"><option>Pedagógica</option><option>Comportamental</option><option>Convivência</option><option>Saúde</option><option>Administrativa</option><option>Registro geral</option></select></label>
-      <label>Professor / responsável<input id="editTeacher"></label>
+      <label class="full">Professor / responsável<input id="editTeacher"></label>
       <label class="full">Descrição<textarea id="editDescription" rows="5" required></textarea></label>
       <label class="full">Ação tomada<textarea id="editAction" rows="3"></textarea></label>
       <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
     </form>
   </dialog>
   <footer class="site-footer">© 2026 E.E. Therezinha Villani • Gestão escolar integrada</footer>
-  <script type="module" src="app.js?v=20260803-19"></script>
+  <script type="module" src="app.js?v=20260803-20"></script>
 </body>
 </html>
