@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0c5f55">
-  <title>Villani 2.1 — Central do Aluno</title>
+  <title>Villani 2.0 — Central do Aluno</title>
   <meta name="description" content="Consulta de alunos, ocorrências e boletins.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260803-7">
+  <link rel="stylesheet" href="styles.css?v=20260803-10">
 </head>
 <body>
   <header class="topbar">
@@ -46,7 +46,7 @@
 
     <section id="occurrences" class="view">
       <div class="heading"><div><small>HISTÓRICO UNIFICADO</small><h2>Consulta de ocorrências</h2></div><b id="occurrenceCount">0 registros</b></div>
-      <div class="filters occurrence-filters"><select id="occurrenceClass"><option value="">Todas as turmas</option></select><select id="occurrenceStudent" disabled><option value="">Todos os alunos</option></select><label class="search"><span>⌕</span><input id="occurrenceSearch" type="search" placeholder="Pesquisar nesta página"></label><input id="dateFrom" type="date" aria-label="Data inicial"><input id="dateTo" type="date" aria-label="Data final"></div>
+      <div class="filters occurrence-filters"><select id="occurrenceClass"><option value="">Todas as turmas</option></select><select id="occurrenceStudent" disabled><option value="">Todos os alunos</option></select><div class="occurrence-name-search"><label class="search"><span>⌕</span><input id="occurrenceSearch" type="search" placeholder="Pesquisar aluno em todas as turmas" autocomplete="off"></label><div id="occurrenceSearchResults" class="search-results" hidden></div></div><input id="dateFrom" type="date" aria-label="Data inicial"><input id="dateTo" type="date" aria-label="Data final"></div>
       <div id="occurrenceList" class="timeline"></div>
       <div class="pagination"><button id="previousOccurrence" disabled>Anterior</button><span id="occurrencePage">Página 1</span><button id="nextOccurrence" disabled>Próxima</button></div>
     </section>
@@ -99,6 +99,6 @@
       <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
     </form>
   </dialog>
-  <script type="module" src="app.js?v=20260803-7"></script>
+  <script type="module" src="app.js?v=20260803-10"></script>
 </body>
 </html>
