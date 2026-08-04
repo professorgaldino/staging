@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0c5f55">
-  <title>Villani 2.1 — Central do Aluno</title>
+  <title>Villani 2.0 — Central do Aluno</title>
   <meta name="description" content="Consulta de alunos, ocorrências e boletins.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260803-11">
+  <link rel="stylesheet" href="styles.css?v=20260803-13">
 </head>
 <body>
   <header class="topbar">
@@ -34,7 +34,7 @@
 
     <section id="masterTools" class="master-tools" hidden>
       <div class="master-tools-icon">↻</div>
-      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização com as planilhas</h2><p>Atualize alunos, turmas e o histórico antigo de ocorrências no Firebase.</p><span id="lastSyncText">Nenhuma sincronização de alunos localizada.</span><span id="lastOccurrenceSyncText">Nenhuma sincronização de ocorrências localizada.</span></div>
+      <div class="master-tools-copy"><small>FERRAMENTAS DO MASTER</small><h2>Sincronização com as planilhas</h2><p>Alunos ativos diretamente das 19 abas SIGFRE/SICE e histórico de ocorrências no Firebase.</p><span id="lastSyncText">Nenhuma sincronização de alunos localizada.</span><span id="lastOccurrenceSyncText">Nenhuma sincronização de ocorrências localizada.</span></div>
       <div class="sync-actions"><button id="syncStudentsButton" class="sync-button">Sincronizar alunos</button><button id="syncOccurrencesButton" class="sync-button secondary-sync">Sincronizar ocorrências</button></div>
     </section>
 
@@ -99,6 +99,6 @@
       <div class="edit-actions full"><button id="deleteOccurrence" class="danger" type="button">Apagar ocorrência</button><button class="primary" type="submit">Salvar alterações</button></div>
     </form>
   </dialog>
-  <script type="module" src="app.js?v=20260803-11"></script>
+  <script type="module" src="app.js?v=20260803-13"></script>
 </body>
 </html>

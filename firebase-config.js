@@ -7,8 +7,5 @@ export const firebaseConfig = {
   appId: "1:1081762335556:web:71bf78cfcbac8c79c9a511"
 };
 
-// Web App que entrega a base atualizada de alunos para a sincronização master.
-export const studentsSyncUrl = "https://script.google.com/macros/s/AKfycbzMz2KkT2rF4pFG5skyztvtHHVms1LMXfGjLMWj2chY-zYbPPqN3PpHLknqE7Rj651Cjw/exec";
-
 // Web App legado que entrega o histórico de ocorrências da planilha.
 export const occurrencesSyncUrl = "https://script.google.com/macros/s/AKfycbxumXT10my5xZQL0_BeeC3NRtDCFSK1-dWYMk3qLQEuPDqDkAoGvLZjvZ4S7t6r9trj/exec?action=consultar";
