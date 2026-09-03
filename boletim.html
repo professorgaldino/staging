@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boletim Escolar 2.4</title>
+
+<style>
+:root{
+    --bg:#eef3f8;
+    --surface:#ffffff;
+    --surface-soft:#f8fafc;
+    --border:#d9e2ec;
+    --text:#172033;
+    --muted:#64748b;
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+    --purple:#7c3aed;
+    --shadow:0 14px 35px rgba(15,23,42,0.10);
+    --radius:14px;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.12), transparent 34%),
+        linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+    color:var(--text);
+    padding:18px;
+}
+
+.container{
+    max-width:1600px;
+    margin:auto;
+}
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+    background:rgba(255,255,255,0.86);
+    border:1px solid rgba(217,226,236,0.9);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin-bottom:16px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(10px);
+}
+
+.topo h2{
+    margin:0;
+    font-size:22px;
+    letter-spacing:0;
+}
+
+select{
+    appearance:none;
+    padding:10px 38px 10px 12px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:
+        linear-gradient(45deg, transparent 50%, var(--muted) 50%) right 15px center / 6px 6px no-repeat,
+        linear-gradient(135deg, var(--muted) 50%, transparent 50%) right 9px center / 6px 6px no-repeat,
+        white;
+    color:var(--text);
+    font-weight:700;
+    cursor:pointer;
+}
+
+button{
+    font-family:inherit;
+}
+
+.navegacao-alunos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:18px;
+}
+
+.btn-aluno{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.18s ease;
+    box-shadow:0 6px 14px rgba(37,99,235,0.24);
+}
+
+.btn-aluno:hover{
+    background:var(--primary-dark);
+    transform:translateY(-1px);
+}
+
+.btn-aluno.ativo{
+    background:var(--success);
+    box-shadow:0 6px 14px rgba(22,163,74,0.28);
+}
+
+.busca-aluno-box{
+    margin-bottom:18px;
+    background:rgba(255,255,255,0.92);
+    border:1px solid rgba(217,226,236,0.95);
+    border-radius:var(--radius);
+    padding:14px;
+    box-shadow:var(--shadow);
+}
+
+.busca-aluno-box label{
+    display:block;
+    font-size:13px;
+    font-weight:bold;
+    color:var(--muted);
+    margin-bottom:8px;
+}
+
+.busca-aluno-input{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+}
+
+.busca-aluno-input:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+}
+
+.resultado-busca{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:10px;
+}
+
+.resultado-busca button{
+    border:none;
+    border-radius:999px;
+    padding:8px 12px;
+    background:#eff6ff;
+    color:#1d4ed8;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.resultado-busca button:hover{
+    background:#dbeafe;
+}
+
+.btn-dashboard{
+    padding:11px 18px;
+    border:none;
+    border-radius:10px;
+    background:var(--purple);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(124,58,237,0.26);
+    transition:0.18s ease;
+}
+
+.btn-dashboard:hover{
+    filter:brightness(0.95);
+    transform:translateY(-1px);
+}
+
+.aluno{
+    background:rgba(255,255,255,0.94);
+    border:1px solid rgba(217,226,236,0.95);
+    border-radius:var(--radius);
+    padding:16px;
+    margin-bottom:20px;
+    display:flex;
+    gap:16px;
+    box-shadow:var(--shadow);
+}
+
+.aluno-status-inativo{
+    background:#fee2e2;
+    border-color:#fecaca;
+}
+
+.foto{
+    width:96px;
+    height:96px;
+    border-radius:14px;
+    object-fit:cover;
+    border:3px solid white;
+    box-shadow:0 8px 20px rgba(15,23,42,0.16);
+}
+
+.sem-foto{
+    width:96px;
+    height:96px;
+    background:#f1f5f9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--danger);
+    border-radius:14px;
+    border:1px solid var(--border);
+}
+
+.info{
+    flex:1;
+    font-size:14px;
+    min-width:0;
+}
+
+.info > strong:first-child{
+    font-size:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    font-size:12px;
+    margin-top:10px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th, td{
+    border-right:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:7px;
+    text-align:center;
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+th:last-child,
+td:last-child{
+    border-right:none;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+}
+
+.subtopo th,
+.subtopo{
+    background:var(--primary-dark);
+    color:white;
+    font-size:11px;
+}
+
+.vazio{
+    background:#ede9fe;
+}
+
+.eletiva-box,
+.ocorrencias-box{
+    margin-top:10px;
+    padding:12px;
+    border-radius:12px;
+    background:var(--surface-soft);
+    border:1px solid var(--border);
+}
+
+.nao-lancado{
+    background:#fff7ed;
+    color:#9a3412;
+    border:1px solid #fed7aa;
+    font-size:12px;
+    font-weight:bold;
+    padding:7px 9px;
+    border-radius:9px;
+    display:inline-block;
+}
+
+.baixa-nota{
+    color:var(--danger);
+    font-weight:bold;
+}
+
+.alerta-frequencia{
+    color:var(--danger);
+    font-weight:bold;
+    margin-top:5px;
+    display:inline-block;
+}
+
+.ocorrencias-box h3{
+    margin:0 0 10px 0;
+    font-size:15px;
+}
+
+.ocorrencia-item{
+    border:1px solid var(--border);
+    background:white;
+    border-radius:12px;
+    padding:10px;
+    margin-bottom:9px;
+    box-shadow:0 5px 12px rgba(15,23,42,0.05);
+}
+
+.ocorrencia-meta{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:4px;
+    line-height:1.5;
+}
+
+.ocorrencia-descricao{
+    font-size:13px;
+    margin-top:6px;
+    margin-bottom:6px;
+    line-height:1.5;
+}
+
+.popup-dashboard{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,0.72);
+    z-index:9999;
+    overflow:auto;
+    padding:22px;
+}
+
+.dashboard-modal{
+    background:white;
+    width:95%;
+    max-width:1400px;
+    margin:10px auto;
+    border-radius:18px;
+    padding:22px;
+    position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.28);
+}
+
+.btn-fechar{
+    position:absolute;
+    top:14px;
+    right:14px;
+    border:none;
+    background:var(--danger);
+    color:white;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.dashboard-card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid var(--border);
+}
+
+@media(max-width:760px){
+    body{
+        padding:10px;
+    }
+
+    .aluno{
+        flex-direction:column;
+    }
+
+    .foto,
+    .sem-foto{
+        width:84px;
+        height:84px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="topo">
+    <h2>📊 Boletim Completo</h2>
+
+    <select id="salaSelect">
+        <option value="6a">6º Ano A</option>
+        <option value="6b">6º Ano B</option>
+        <option value="6c">6º Ano C</option>
+        <option value="7a">7º Ano A</option>
+        <option value="7b">7º Ano B</option>
+        <option value="7c">7º Ano C</option>
+        <option value="8a">8º Ano A</option>
+        <option value="8b">8º Ano B</option>
+        <option value="8c">8º Ano C</option>
+        <option value="9a">9º Ano A</option>
+        <option value="9b">9º Ano B</option>
+        <option value="9c">9º Ano C</option>
+        <option value="1a">1º Ano A</option>
+        <option value="1b">1º Ano B</option>
+        <option value="1c">1º Ano C</option>
+        <option value="1d">1º Ano D</option>
+        <option value="2a">2º Ano A</option>
+        <option value="2b">2º Ano B</option>
+        <option value="3a">3º Ano A</option> 
+    </select>
+</div>
+
+<div id="navegacaoAlunos" class="navegacao-alunos"></div>
+
+<div class="busca-aluno-box">
+    <label>Buscar aluno pelo nome</label>
+    <input
+        id="buscaAluno"
+        class="busca-aluno-input"
+        type="text"
+        placeholder="Digite parte do nome. Ex: joao, maria, ana..."
+        oninput="buscarAlunoRapido()"
+        onkeydown="atalhoBuscaAluno(event)"
+    >
+    <div id="resultadoBuscaAluno" class="resultado-busca"></div>
+</div>
+
+<div style="margin-bottom:15px;">
+    <button onclick="abrirDashboard()" class="btn-dashboard">
+        📊 Dashboard da Sala
+    </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div id="popupDashboard" class="popup-dashboard">
+    <div class="dashboard-modal">
+        <button onclick="fecharDashboard()" class="btn-fechar">X</button>
+
+        <h2>📊 Dashboard da Sala</h2>
+
+        <div style="margin:15px 0;">
+            <label>Bimestre:</label>
+
+            <select id="dashboardBimestre" onchange="gerarDashboard()">
+                <option value="1">1º Bimestre</option>
+                <option value="2">2º Bimestre</option>
+                <option value="3">3º Bimestre</option>
+                <option value="4">4º Bimestre</option>
+            </select>
+        </div>
+
+        <div id="dashboardConteudo"></div>
+    </div>
+</div>
+
+<div id="boletim"></div>
+
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+import { collection, getDocs, getFirestore, query, where } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAIRlNEHZ0y_htrk16aL0Yu8__BiB_DPqQ",
+    authDomain: "villani-915de.firebaseapp.com",
+    projectId: "villani-915de",
+    storageBucket: "villani-915de.firebasestorage.app",
+    messagingSenderId: "1081762335556",
+    appId: "1:1081762335556:web:71bf78cfcbac8c79c9a511"
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+
+const BIMESTRES = {
+    1: "apb",
+    2: "asb",
+    3: "atb",
+    4: "aqb"
+};
+
+let serie = "6a";
+let alunosFirestore = [];
+const cacheOcorrencias = new Map();
+let dadosBimestres = {};
+let indiceAtual = 0;
+let graficoDashboard = null;
+
+function resolverFoto(valor){
+    if(!valor) return null;
+
+    const texto = String(valor).trim();
+    if(!texto) return null;
+
+    // Aceita URL completa do Firebase Storage/Google Drive ou apenas um ID antigo do Drive.
+    const matchDrive = texto.match(/(?:\/d\/|id=)([-\w]{15,})/);
+    const idDrive = matchDrive?.[1] || (/^[-\w]{15,}$/.test(texto) ? texto : "");
+
+    if(idDrive){
+        return `https://lh3.googleusercontent.com/d/${idDrive}=w600`;
+    }
+
+    return texto;
+}
+
+function normalizar(t){
+    return String(t || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function alunoAtivo(situacao){
+    return normalizar(situacao) === "ativo";
+}
+
+function normalizarRA(ra){
+    return String(ra || "")
+        .replace(/\D/g, "")
+        .replace(/^0+/, "");
+}
+
+function escaparHTML(valor){
+    return String(valor ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function v(x){
+    return (
+        x === null ||
+        x === undefined ||
+        x === ""
+    ) ? "-" : x;
+}
+
+function numero(valor){
+    return Number(String(valor).replace(",", "."));
+}
+
+function formatarDataBR(valor){
+    if(!valor) return "-";
+
+    if(typeof valor === "string" && valor.includes("/") && !valor.includes("T")){
+        return valor;
+    }
+
+    const data = new Date(valor);
+
+    if(isNaN(data.getTime())){
+        return valor;
+    }
+
+    return data.toLocaleDateString("pt-BR", {
+        timeZone:"America/Sao_Paulo"
+    });
+}
+
+function formatarHoraBR(valor){
+    if(!valor) return "";
+
+    if(typeof valor === "string" && /^\d{1,2}:\d{2}/.test(valor)){
+        return valor.slice(0, 5);
+    }
+
+    const data = new Date(valor);
+
+    if(isNaN(data.getTime())){
+        return valor;
+    }
+
+    const hora = String(data.getUTCHours()).padStart(2, "0");
+    const minuto = String(data.getUTCMinutes()).padStart(2, "0");
+
+    return `${hora}:${minuto}`;
+}
+
+function classeNota(valor){
+    const n = numero(valor);
+
+    if(!isNaN(n) && n < 5){
+        return "baixa-nota";
+    }
+
+    return "";
+}
+
+function classeFrequencia(valor){
+    const n = numero(valor);
+
+    if(!isNaN(n) && n < 75){
+        return "baixa-nota";
+    }
+
+    return "";
+}
+
+function pegarCampo(obj, nomes){
+    if(!obj) return "";
+
+    const mapa = {};
+
+    Object.keys(obj).forEach(chave => {
+        mapa[normalizar(chave)] = obj[chave];
+    });
+
+    for(const nome of nomes){
+        const valor = mapa[normalizar(nome)];
+
+        if(
+            valor !== undefined &&
+            valor !== null &&
+            valor !== ""
+        ){
+            return valor;
+        }
+    }
+
+    return "";
+}
+
+async function carregarAlunos(){
+    try{
+        alunosFirestore = await carregarAlunosFirestore();
+    }catch(error){
+        alunosFirestore = [];
+        console.error("Não foi possível carregar os alunos do Firebase:", error);
+        throw error;
+    }
+}
+
+async function carregarAlunosFirestore(){
+    const classId = String(serie || "").toUpperCase();
+    const snapshot = await getDocs(
+        query(collection(db, "students"), where("classId", "==", classId))
+    );
+
+    return snapshot.docs.map((entry, index) => {
+        const raw = entry.data();
+        const statusTexto = String(raw.situacao || raw.status || "").trim();
+        const ativoExplicito = raw.active;
+        const ativo = ativoExplicito !== undefined
+            ? [true, "true", 1, "1", "sim", "ativo"].includes(
+                typeof ativoExplicito === "string" ? normalizar(ativoExplicito) : ativoExplicito
+            )
+            : (statusTexto ? alunoAtivo(statusTexto) : true);
+
+        return {
+            id: entry.id,
+            ...raw,
+            name: String(raw.name || raw.nome || "Aluno sem nome"),
+            nome: String(raw.name || raw.nome || "Aluno sem nome"),
+            ra: String(raw.ra || raw.RA || ""),
+            digit: String(raw.digit || raw.digito || ""),
+            classId: String(raw.classId || raw.sala || raw.Sala || classId).toUpperCase(),
+            number: raw.number ?? raw.numero ?? "",
+            numero: raw.number ?? raw.numero ?? "",
+            tutor: String(raw.tutor || raw.Tutor || ""),
+            elective: String(raw.elective || raw.eletiva1 || raw.elective1 || ""),
+            eletiva1: String(raw.eletiva1 || raw.elective || raw.elective1 || ""),
+            eletiva2: String(raw.eletiva2 || raw.elective2 || ""),
+            birthday: String(raw.birthday || raw.nascimento || ""),
+            photoUrl: String(raw.photoUrl || raw.fotoUrl || raw.foto || ""),
+            situacao: statusTexto || (ativo ? "Ativo" : "Inativo"),
+            active: ativo,
+            _ordemFirestore: index
+        };
+    }).sort((a, b) => {
+        const na = Number(a.number);
+        const nb = Number(b.number);
+
+        if(Number.isFinite(na) && Number.isFinite(nb) && na !== nb){
+            return na - nb;
+        }
+
+        return normalizar(a.name).localeCompare(normalizar(b.name));
+    });
+}
+
+function acharCadastroAluno(alunoReferencia){
+    if(!alunoReferencia) return null;
+
+    if(alunoReferencia.id){
+        const porId = alunosFirestore.find(a => a.id === alunoReferencia.id);
+        if(porId) return porId;
+    }
+
+    const raReferencia = normalizarRA(alunoReferencia.ra);
+    if(raReferencia){
+        const porRa = alunosFirestore.find(a => normalizarRA(a.ra) === raReferencia);
+        if(porRa) return porRa;
+    }
+
+    const nomeReferencia = normalizar(alunoReferencia.name || alunoReferencia.nome);
+    const numeroReferencia = String(alunoReferencia.number ?? alunoReferencia.numero ?? "");
+
+    const candidatos = alunosFirestore.filter(a =>
+        normalizar(a.name || a.nome) === nomeReferencia
+    );
+
+    if(numeroReferencia){
+        const mesmoNumero = candidatos.find(a =>
+            String(a.number ?? a.numero ?? "") === numeroReferencia
+        );
+        if(mesmoNumero) return mesmoNumero;
+    }
+
+    return candidatos[0] || null;
+}
+
+function pegarFotoAluno(cadastro){
+    if(!cadastro) return null;
+    return resolverFoto(cadastro.photoUrl || cadastro.fotoUrl || cadastro.foto || cadastro.photo || "");
+}
+
+function adaptarOcorrenciaFirestore(entry){
+    const raw = entry.data ? entry.data() : entry;
+
+    const createdAt = raw.createdAt?.toDate
+        ? raw.createdAt.toDate()
+        : raw.createdAt || "";
+
+    return {
+        id: entry.id || raw.id || "",
+        studentId: String(raw.studentId || ""),
+        studentRa: String(raw.studentRa || raw.ra || raw.RA || ""),
+        studentName: String(raw.studentName || raw.nome || raw["Nome do Aluno"] || raw.aluno || ""),
+        classId: String(raw.classId || raw.sala || raw.Sala || "").toUpperCase(),
+        tutor: String(raw.tutor || raw.Tutor || ""),
+        eventDate: raw.eventDate || raw.dataFato || raw["Data do Fato"] || "",
+        eventTime: raw.eventTime || raw.horaFato || raw["Hora do Fato"] || "",
+        teacher: raw.teacher || raw.professor || raw.Professor || "",
+        description: raw.description || raw.descricao || raw["Descrição"] || "",
+        actionTaken: raw.actionTaken || raw.acao || raw["Ação Tomada"] || "",
+        registeredAt: raw.registeredAt || raw.dataRegistro || raw["Data Registro"] || createdAt,
+        registeredTime: raw.registeredTime || raw.horaRegistro || raw["Hora Registro"] || ""
+    };
+}
+
+async function consultarOcorrenciasAluno(alunoBoletim, cadastro){
+    const nome = String(cadastro?.name || cadastro?.nome || alunoBoletim?.nome || "");
+    const ra = String(cadastro?.ra || alunoBoletim?.ra || "");
+    const studentId = String(cadastro?.id || "");
+    const classId = String(cadastro?.classId || serie || "").toUpperCase();
+
+    const chaveCache = [studentId, normalizarRA(ra), normalizar(nome), classId].join("|");
+    if(cacheOcorrencias.has(chaveCache)){
+        return cacheOcorrencias.get(chaveCache);
+    }
+
+    const documentos = new Map();
+
+    async function consultarCampo(campo, valor){
+        if(!valor) return;
+
+        const snapshot = await getDocs(
+            query(collection(db, "occurrences"), where(campo, "==", valor))
+        );
+
+        snapshot.docs.forEach(docSnap => {
+            const item = adaptarOcorrenciaFirestore(docSnap);
+
+            if(classId && item.classId && item.classId !== classId){
+                return;
+            }
+
+            documentos.set(docSnap.id, item);
+        });
+    }
+
+    // Vínculo principal: ID oficial do aluno no Firestore.
+    await consultarCampo("studentId", studentId);
+
+    // Compatibilidade com registros antigos ou alunos ainda não encontrados pelo ID.
+    if(documentos.size === 0){
+        await consultarCampo("studentRa", ra);
+    }
+
+    if(documentos.size === 0){
+        await consultarCampo("studentName", nome);
+    }
+
+    const lista = [...documentos.values()].sort((a, b) =>
+        `${b.eventDate || ""} ${b.eventTime || ""}`.localeCompare(
+            `${a.eventDate || ""} ${a.eventTime || ""}`
+        )
+    );
+
+    cacheOcorrencias.set(chaveCache, lista);
+    return lista;
+}
+
+async function carregarBimestre(n){
+    try{
+        const arquivo = `${serie}${BIMESTRES[n]}.json`;
+        const res = await fetch(arquivo);
+
+        if(!res.ok){
+            throw new Error("Arquivo não encontrado: " + arquivo);
+        }
+
+        return await res.json();
+
+    }catch(e){
+        console.warn("Bimestre não carregado:", e.message);
+        return null;
+    }
+}
+
+function pegarBaseAlunos(){
+    // O cadastro/lista de alunos vem exclusivamente do Firestore.
+    // Os JSONs continuam sendo usados apenas para dados acadêmicos (notas/faltas).
+    return [...alunosFirestore].sort((a, b) => {
+        const na = Number(a.number ?? a.numero);
+        const nb = Number(b.number ?? b.numero);
+
+        if(Number.isFinite(na) && Number.isFinite(nb) && na !== nb){
+            return na - nb;
+        }
+
+        return normalizar(a.name || a.nome).localeCompare(
+            normalizar(b.name || b.nome)
+        );
+    });
+}
+
+function pegarAlunoBimestre(alunoReferencia, n){
+    const dados = dadosBimestres[n];
+    if(!dados) return null;
+
+    const lista = Object.values(dados);
+    const cadastro = acharCadastroAluno(alunoReferencia) || alunoReferencia || {};
+    const raReferencia = normalizarRA(cadastro.ra || alunoReferencia?.ra);
+    const nomeReferencia = normalizar(
+        cadastro.name || cadastro.nome || alunoReferencia?.name || alunoReferencia?.nome
+    );
+    const numeroReferencia = String(
+        cadastro.number ?? cadastro.numero ?? alunoReferencia?.number ?? alunoReferencia?.numero ?? ""
+    );
+
+    // Se os JSONs passarem a trazer RA, ele será sempre a primeira chave de vínculo.
+    if(raReferencia){
+        const porRa = lista.find(a => normalizarRA(a.ra || a.RA) === raReferencia);
+        if(porRa) return porRa;
+    }
+
+    if(nomeReferencia){
+        const porNome = lista.filter(a => normalizar(a.nome || a.name) === nomeReferencia);
+
+        if(porNome.length){
+            if(numeroReferencia){
+                const mesmoNumero = porNome.find(a =>
+                    String(a.numero ?? a.number ?? "") === numeroReferencia
+                );
+                if(mesmoNumero) return mesmoNumero;
+            }
+
+            return porNome[0];
+        }
+    }
+
+    // Último recurso: número de chamada dentro do JSON da própria turma/bimestre.
+    // Só é usado quando RA e nome não localizaram o aluno.
+    if(numeroReferencia){
+        const porNumero = lista.filter(a =>
+            String(a.numero ?? a.number ?? "") === numeroReferencia
+        );
+        if(porNumero.length === 1) return porNumero[0];
+    }
+
+    return null;
+}
+
+function pegarAlunoQualquerBimestre(alunoReferencia){
+    for(let b = 1; b <= 4; b++){
+        const aluno = pegarAlunoBimestre(alunoReferencia, b);
+
+        if(aluno){
+            return aluno;
+        }
+    }
+
+    return null;
+}
+
+function pegarDisciplinasAluno(alunoReferencia){
+    const disciplinas = [];
+
+    for(let b = 1; b <= 4; b++){
+        const aluno = pegarAlunoBimestre(alunoReferencia, b);
+
+        if(!aluno || !aluno.disciplinas) continue;
+
+        Object.keys(aluno.disciplinas).forEach(disciplina => {
+            if(!disciplinas.includes(disciplina)){
+                disciplinas.push(disciplina);
+            }
+        });
+    }
+
+    return disciplinas;
+}
+
+async function carregar(){
+    const box = document.getElementById("boletim");
+    const nav = document.getElementById("navegacaoAlunos");
+    const busca = document.getElementById("buscaAluno");
+    const resultadoBusca = document.getElementById("resultadoBuscaAluno");
+
+    box.innerHTML = `
+    <div class="nao-lancado">
+        Carregando dados...
+    </div>
+    `;
+
+    nav.innerHTML = "";
+
+    if(busca) busca.value = "";
+    if(resultadoBusca) resultadoBusca.innerHTML = "";
+
+    dadosBimestres = {};
+    cacheOcorrencias.clear();
+    alunosFirestore = [];
+
+    try{
+        await carregarAlunos();
+    }catch(error){
+        box.innerHTML = `
+        <div class="nao-lancado">
+            Não foi possível carregar os alunos do Firebase para a turma ${escaparHTML(String(serie).toUpperCase())}.
+        </div>
+        `;
+        return;
+    }
+
+    for(let i = 1; i <= 4; i++){
+        dadosBimestres[i] = await carregarBimestre(i);
+    }
+
+    montarNavegacao();
+
+    const base = pegarBaseAlunos();
+
+    if(base.length === 0){
+        box.innerHTML = `
+        <div class="nao-lancado">
+            Nenhum aluno encontrado no Firebase para a turma ${escaparHTML(String(serie).toUpperCase())}.
+        </div>
+        `;
+        return;
+    }
+
+    mostrarAluno(0);
+}
+
+function montarEletivas(alunoBase){
+    const e1 = alunoBase?.eletiva1 || alunoBase?.elective || alunoBase?.elective1 || "";
+    const e2 = alunoBase?.eletiva2 || alunoBase?.elective2 || "";
+
+    return `
+    <div class="eletiva-box">
+        <strong>📘 Eletivas</strong><br><br>
+
+        Eletiva 1° Semestre:
+        ${escaparHTML(e1 ? e1 : "Sem eletiva")}<br>
+
+        Eletiva 2° Semestre:
+        ${escaparHTML(e2 ? e2 : "Sem eletiva")}
+    </div>
+    `;
+}
+
+function montarOcorrenciasCarregando(){
+    return `
+    <div class="ocorrencias-box" id="ocorrenciasAlunoAtual">
+        <h3>📌 Ocorrências</h3>
+        <span class="nao-lancado">Consultando Firestore...</span>
+    </div>
+    `;
+}
+
+function renderizarListaOcorrencias(lista){
+    let html = `<h3>📌 Ocorrências</h3>`;
+
+    if(!lista.length){
+        return html + `
+        <span class="nao-lancado">
+            Nenhuma ocorrência encontrada
+        </span>
+        `;
+    }
+
+    lista.forEach(item => {
+        const dataRegistro = item.registeredAt;
+        const horaRegistro = item.registeredTime;
+        const dataFato = item.eventDate;
+        const horaFato = item.eventTime;
+
+        html += `
+        <div class="ocorrencia-item">
+            <div class="ocorrencia-meta">
+                <strong>Registro:</strong>
+                ${escaparHTML(formatarDataBR(dataRegistro))}
+                ${horaRegistro ? " - " + escaparHTML(formatarHoraBR(horaRegistro)) : ""}
+                <br>
+
+                <strong>Data do fato:</strong>
+                ${escaparHTML(formatarDataBR(dataFato))}
+                ${horaFato ? " - " + escaparHTML(formatarHoraBR(horaFato)) : ""}
+                <br>
+
+                <strong>RA:</strong> ${escaparHTML(v(item.studentRa))}
+                |
+                <strong>Sala:</strong> ${escaparHTML(v(item.classId))}
+                |
+                <strong>Tutor:</strong> ${escaparHTML(v(item.tutor))}
+                |
+                <strong>Professor:</strong> ${escaparHTML(v(item.teacher))}
+            </div>
+
+            <div class="ocorrencia-descricao">
+                <strong>Descrição:</strong>
+                ${escaparHTML(v(item.description))}
+            </div>
+
+            <div class="ocorrencia-meta">
+                <strong>Ação:</strong>
+                ${escaparHTML(v(item.actionTaken))}
+            </div>
+        </div>
+        `;
+    });
+
+    return html;
+}
+
+async function atualizarOcorrenciasAluno(alunoBoletim, cadastro, tokenAluno){
+    const boxOcorrencias = document.getElementById("ocorrenciasAlunoAtual");
+    if(!boxOcorrencias) return;
+
+    try{
+        const lista = await consultarOcorrenciasAluno(alunoBoletim, cadastro);
+
+        // Impede uma consulta antiga de sobrescrever a tela se o usuário trocar de aluno rapidamente.
+        if(tokenAluno !== indiceAtual) return;
+
+        const alvo = document.getElementById("ocorrenciasAlunoAtual");
+        if(alvo){
+            alvo.innerHTML = renderizarListaOcorrencias(lista);
+        }
+    }catch(error){
+        console.error("Erro ao consultar ocorrências no Firestore:", error);
+
+        if(tokenAluno !== indiceAtual) return;
+
+        const alvo = document.getElementById("ocorrenciasAlunoAtual");
+        if(alvo){
+            alvo.innerHTML = `
+                <h3>📌 Ocorrências</h3>
+                <span class="nao-lancado">
+                    Não foi possível consultar as ocorrências no Firebase.
+                </span>
+            `;
+        }
+    }
+}
+
+function montarTabelaUnica(alunoBaseBoletim){
+    const alunoReferencia = pegarAlunoQualquerBimestre(alunoBaseBoletim);
+    const disciplinas = pegarDisciplinasAluno(alunoBaseBoletim);
+
+    if(!alunoReferencia || disciplinas.length === 0){
+        return `
+        <div class="nao-lancado">
+            Nenhum boletim encontrado
+        </div>
+        `;
+    }
+
+    let html = `
+    <table>
+        <tr>
+            <th rowspan="2">Disciplina</th>
+            <th colspan="3">📘 1° Bimestre</th>
+            <th colspan="3">📘 2° Bimestre</th>
+            <th colspan="3">📘 3° Bimestre</th>
+            <th colspan="3">📘 4° Bimestre</th>
+        </tr>
+
+        <tr class="subtopo">
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>F.AC</th>
+
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>F.AC</th>
+
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>F.AC</th>
+
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>F.AC</th>
+        </tr>
+    `;
+
+    disciplinas.forEach(disciplina => {
+        html += `<tr>`;
+        html += `<td>${escaparHTML(disciplina)}</td>`;
+
+        for(let b = 1; b <= 4; b++){
+            const aluno = pegarAlunoBimestre(alunoBaseBoletim, b);
+
+            if(!dadosBimestres[b]){
+                html += `
+                <td colspan="3" class="nao-lancado">
+                    Não lançado
+                </td>
+                `;
+                continue;
+            }
+
+            if(!aluno){
+                html += `
+                <td colspan="3" class="nao-lancado">
+                    Sem dados
+                </td>
+                `;
+                continue;
+            }
+
+            const d = aluno.disciplinas?.[disciplina];
+
+            if(!d){
+                html += `
+                <td colspan="3" class="nao-lancado">
+                    Sem disciplina
+                </td>
+                `;
+                continue;
+            }
+
+            const media = v(d.numero);
+            const faltas = v(d.media);
+            const acum = v(d.faltas);
+
+            html += `
+            <td class="${media === "-" ? "vazio" : ""} ${classeNota(media)}">
+                ${escaparHTML(media)}
+            </td>
+
+            <td class="${faltas === "-" ? "vazio" : ""}">
+                ${escaparHTML(faltas)}
+            </td>
+
+            <td>
+                ${escaparHTML(acum)}
+            </td>
+            `;
+        }
+
+        html += `</tr>`;
+    });
+
+    html += `</table>`;
+
+    for(let b = 1; b <= 4; b++){
+        const aluno = pegarAlunoBimestre(alunoBaseBoletim, b);
+
+        html += `<br>`;
+        html += `<strong>📘 ${b}° Bimestre</strong><br>`;
+
+        if(!dadosBimestres[b]){
+            html += `
+            <span class="nao-lancado">
+                Bimestre não lançado
+            </span>
+            `;
+            continue;
+        }
+
+        if(!aluno){
+            html += `
+            <span class="nao-lancado">
+                Sem dados do aluno
+            </span>
+            `;
+            continue;
+        }
+
+        const freq = numero(aluno.totais?.frequencia);
+        const freqAnual = numero(aluno.totais?.frequencia_anual);
+
+        html += `
+        📌 Faltas acumuladas:
+        ${escaparHTML(v(aluno.totais?.faltas_acumuladas))}<br>
+
+        <span class="${classeFrequencia(freq)}">
+        📊 Frequência:
+        ${escaparHTML(v(aluno.totais?.frequencia))}%
+        </span><br>
+
+        📌 Faltas anual:
+        ${escaparHTML(v(aluno.totais?.faltas_anual))}<br>
+
+        <span class="${classeFrequencia(freqAnual)}">
+        📊 Frequência anual:
+        ${escaparHTML(v(aluno.totais?.frequencia_anual))}%
+        </span>
+        `;
+
+        if(freq < 75 || freqAnual < 75){
+            html += `
+            <br>
+            <span class="alerta-frequencia">
+                ⚠ Apresenta Muitas Faltas
+            </span>
+            `;
+        }
+    }
+
+    return html;
+}
+
+function distanciaTexto(a, b){
+    a = normalizar(a);
+    b = normalizar(b);
+
+    const matriz = [];
+
+    for(let i = 0; i <= b.length; i++){
+        matriz[i] = [i];
+    }
+
+    for(let j = 0; j <= a.length; j++){
+        matriz[0][j] = j;
+    }
+
+    for(let i = 1; i <= b.length; i++){
+        for(let j = 1; j <= a.length; j++){
+            if(b.charAt(i - 1) === a.charAt(j - 1)){
+                matriz[i][j] = matriz[i - 1][j - 1];
+            }else{
+                matriz[i][j] = Math.min(
+                    matriz[i - 1][j - 1] + 1,
+                    matriz[i][j - 1] + 1,
+                    matriz[i - 1][j] + 1
+                );
+            }
+        }
+    }
+
+    return matriz[b.length][a.length];
+}
+
+function pontuarBuscaAluno(nome, termo){
+    const nomeNormalizado = normalizar(nome);
+    const termoNormalizado = normalizar(termo);
+
+    if(!termoNormalizado) return 999;
+
+    if(nomeNormalizado === termoNormalizado) return 0;
+
+    if(nomeNormalizado.includes(termoNormalizado)) return 1;
+
+    const partes = nomeNormalizado.split(" ");
+
+    if(partes.some(p => p.startsWith(termoNormalizado))){
+        return 2;
+    }
+
+    const menorDistanciaParte = Math.min(
+        ...partes.map(p => distanciaTexto(p, termoNormalizado))
+    );
+
+    if(menorDistanciaParte <= 2){
+        return 3;
+    }
+
+    const distanciaNomeCompleto = distanciaTexto(nomeNormalizado, termoNormalizado);
+
+    if(distanciaNomeCompleto <= 3){
+        return 4;
+    }
+
+    return 999;
+}
+
+function buscarAlunoRapido(){
+    const input = document.getElementById("buscaAluno");
+    const resultado = document.getElementById("resultadoBuscaAluno");
+
+    if(!input || !resultado) return;
+
+    const termo = input.value.trim();
+    const base = pegarBaseAlunos();
+
+    resultado.innerHTML = "";
+
+    if(termo.length < 2 || base.length === 0){
+        return;
+    }
+
+    const encontrados = base
+        .map((aluno, index) => ({
+            aluno,
+            index,
+            score: pontuarBuscaAluno(aluno.nome, termo)
+        }))
+        .filter(item => item.score < 999)
+        .sort((a, b) => {
+            if(a.score !== b.score) return a.score - b.score;
+
+            return normalizar(a.aluno.nome).localeCompare(
+                normalizar(b.aluno.nome)
+            );
+        })
+        .slice(0, 10);
+
+    if(encontrados.length === 0){
+        resultado.innerHTML = `
+        <span class="nao-lancado">
+            Nenhum aluno encontrado
+        </span>
+        `;
+        return;
+    }
+
+    encontrados.forEach(item => {
+        resultado.innerHTML += `
+        <button onclick="abrirAlunoBusca(${item.index})">
+            ${escaparHTML(item.aluno.nome)}
+        </button>
+        `;
+    });
+}
+
+function abrirAlunoBusca(index){
+    mostrarAluno(index);
+
+    const input = document.getElementById("buscaAluno");
+    const resultado = document.getElementById("resultadoBuscaAluno");
+
+    if(input) input.value = "";
+    if(resultado) resultado.innerHTML = "";
+
+    document.getElementById("boletim").scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+}
+
+function atalhoBuscaAluno(event){
+    if(event.key !== "Enter") return;
+
+    const primeiro = document.querySelector("#resultadoBuscaAluno button");
+
+    if(primeiro){
+        primeiro.click();
+    }
+}
+
+function montarNavegacao(){
+    const nav = document.getElementById("navegacaoAlunos");
+
+    nav.innerHTML = "";
+
+    const base = pegarBaseAlunos();
+
+    if(base.length === 0) return;
+
+    base.forEach((a, index) => {
+        nav.innerHTML += `
+        <button
+            class="btn-aluno ${index === 0 ? "ativo" : ""}"
+            onclick="mostrarAluno(${index})">
+            ${escaparHTML(a.numero ?? (index + 1))}
+        </button>
+        `;
+    });
+}
+
+function mostrarAluno(index){
+    indiceAtual = index;
+
+    const botoes = document.querySelectorAll(".btn-aluno");
+
+    botoes.forEach((b,i) => {
+        b.classList.toggle("ativo", i === index);
+    });
+
+    const box = document.getElementById("boletim");
+
+    const base = pegarBaseAlunos();
+    const a = base[index];
+
+    if(!a){
+        box.innerHTML = `
+        <div class="nao-lancado">
+            Aluno não encontrado.
+        </div>
+        `;
+        return;
+    }
+
+    const alunoBase = acharCadastroAluno(a) || a;
+
+    const foto = pegarFotoAluno(alunoBase);
+
+    const fotoHTML = foto
+        ? `<img class="foto" src="${escaparHTML(foto)}" alt="Foto do aluno" onerror="this.outerHTML='<div class=&quot;sem-foto&quot;>❌</div>'">`
+        : `<div class="sem-foto">❌</div>`;
+
+    const raAluno = alunoBase?.ra || "";
+    const digitoAluno = alunoBase?.digit || alunoBase?.digito || "";
+    const raCompleto = raAluno ? `${raAluno}${digitoAluno ? `-${digitoAluno}` : ""}` : "";
+    const tutorAluno = alunoBase?.tutor || "-";
+    const situacaoAluno = alunoBase?.situacao || (alunoBase?.active === false ? "Inativo" : "Ativo");
+    const classeSituacao = alunoAtivo(situacaoAluno) ? "" : "aluno-status-inativo";
+
+    box.innerHTML = `
+    <div class="aluno ${classeSituacao}">
+        ${fotoHTML}
+
+        <div class="info">
+            <strong>${escaparHTML(alunoBase?.name || alunoBase?.nome || a.nome || a.name)}</strong><br>
+
+            RA:
+            ${escaparHTML(raCompleto || "-")}<br>
+
+            Tutor:
+            ${escaparHTML(tutorAluno)}<br>
+
+            Situação:
+            <strong>
+            ${escaparHTML(situacaoAluno)}
+            </strong><br>
+
+            ${montarEletivas(alunoBase)}
+
+            ${montarOcorrenciasCarregando()}
+
+            <br>
+
+            ${montarTabelaUnica(a)}
+        </div>
+    </div>
+    `;    atualizarOcorrenciasAluno(a, alunoBase, index);
+}
+
+function abrirDashboard(){
+    document.getElementById("popupDashboard").style.display = "block";
+    gerarDashboard();
+}
+
+function fecharDashboard(){
+    document.getElementById("popupDashboard").style.display = "none";
+}
+
+function gerarDashboard(){
+    const bimestre = Number(
+        document.getElementById("dashboardBimestre").value
+    );
+
+    const dados = dadosBimestres[bimestre];
+    const box = document.getElementById("dashboardConteudo");
+
+    if(!dados){
+        box.innerHTML = `
+        <div class="nao-lancado">
+            Bimestre não lançado
+        </div>
+        `;
+        return;
+    }
+
+    const disciplinas = {};
+    const alunosRisco = [];
+    const alunosSemNota = [];
+
+    Object.values(dados).forEach(aluno => {
+        let qtdNotasBaixas = 0;
+        const notasBaixasAluno = [];
+        const alunoEstaAtivo = alunoAtivo(aluno.situacao || "ativo");
+
+        for(let disc in aluno.disciplinas){
+            const d = aluno.disciplinas[disc];
+
+            if(!disciplinas[disc]){
+                disciplinas[disc] = {
+                    boas:0,
+                    ruins:0,
+                    sem:0
+                };
+            }
+
+            const nota = numero(d.numero);
+
+            if(
+                d.numero === "-" ||
+                d.numero === "" ||
+                d.numero === null ||
+                isNaN(nota)
+            ){
+                if(alunoEstaAtivo){
+                    disciplinas[disc].sem++;
+                    alunosSemNota.push(`${aluno.nome} - ${disc}`);
+                }
+            }else if(nota < 5){
+                disciplinas[disc].ruins++;
+                qtdNotasBaixas++;
+                notasBaixasAluno.push({
+                    disciplina: disc,
+                    nota: d.numero
+                });
+            }else{
+                disciplinas[disc].boas++;
+            }
+        }
+
+        if(qtdNotasBaixas >= 4){
+            alunosRisco.push({
+                nome: aluno.nome,
+                notas: notasBaixasAluno
+            });
+        }
+    });
+
+    let tabelaVermelhos = `
+    <h3>🔴 Disciplinas com Notas Baixas</h3>
+
+    <table>
+        <tr>
+            <th>Disciplina</th>
+            <th>Notas ≥ 5</th>
+            <th>Notas < 5</th>
+            <th>Sem Nota</th>
+        </tr>
+    `;
+
+    Object.keys(disciplinas).forEach(d => {
+        tabelaVermelhos += `
+        <tr>
+            <td>${escaparHTML(d)}</td>
+            <td>${disciplinas[d].boas}</td>
+            <td class="baixa-nota">${disciplinas[d].ruins}</td>
+            <td>${disciplinas[d].sem}</td>
+        </tr>
+        `;
+    });
+
+    tabelaVermelhos += `</table>`;
+
+    let riscoHTML = `
+    <h3 style="margin-top:30px;">
+        ⚠ Alunos com Risco de Retenção
+    </h3>
+    `;
+
+    if(alunosRisco.length === 0){
+        riscoHTML += `Nenhum aluno encontrado.`;
+    }else{
+        riscoHTML += `
+        <table>
+            <tr>
+                <th>Aluno</th>
+                <th>Disciplinas e Notas Vermelhas</th>
+            </tr>
+        `;
+
+        alunosRisco.forEach(a => {
+            const notasHTML = a.notas.map(item => {
+                return `${escaparHTML(item.disciplina)}: <span class="baixa-nota">${escaparHTML(item.nota)}</span>`;
+            }).join("<br>");
+
+            riscoHTML += `
+            <tr>
+                <td class="baixa-nota">
+                    ${escaparHTML(a.nome)}
+                </td>
+                <td>
+                    ${notasHTML}
+                </td>
+            </tr>
+            `;
+        });
+
+        riscoHTML += `</table>`;
+    }
+
+    let semNotaHTML = `
+    <h3 style="margin-top:30px;">
+        📌 Alunos sem Nota
+    </h3>
+    `;
+
+    if(alunosSemNota.length === 0){
+        semNotaHTML += `Nenhum aluno encontrado.`;
+    }else{
+        semNotaHTML += `
+        <table>
+            <tr>
+                <th>Aluno / Disciplina</th>
+            </tr>
+        `;
+
+        alunosSemNota.forEach(a => {
+            semNotaHTML += `
+            <tr>
+                <td>${escaparHTML(a)}</td>
+            </tr>
+            `;
+        });
+
+        semNotaHTML += `</table>`;
+    }
+
+    box.innerHTML = `
+        <div class="dashboard-card">
+            <canvas id="graficoDashboard"></canvas>
+        </div>
+
+        ${tabelaVermelhos}
+        ${riscoHTML}
+        ${semNotaHTML}
+    `;
+
+    const labels = Object.keys(disciplinas);
+    const boas = labels.map(d => disciplinas[d].boas);
+    const ruins = labels.map(d => disciplinas[d].ruins);
+    const sem = labels.map(d => disciplinas[d].sem);
+
+    if(graficoDashboard){
+        graficoDashboard.destroy();
+    }
+
+    graficoDashboard = new Chart(
+        document.getElementById("graficoDashboard"),
+        {
+            type:"bar",
+            data:{
+                labels,
+                datasets:[
+                    {
+                        label:"Notas ≥ 5",
+                        data:boas,
+                        backgroundColor:"#16a34a"
+                    },
+                    {
+                        label:"Notas < 5",
+                        data:ruins,
+                        backgroundColor:"#dc2626"
+                    },
+                    {
+                        label:"Sem Nota",
+                        data:sem,
+                        backgroundColor:"#64748b"
+                    }
+                ]
+            },
+            options:{
+                responsive:true,
+                plugins:{
+                    title:{
+                        display:true,
+                        text:"Análise de Notas por Disciplina"
+                    }
+                },
+                scales:{
+                    y:{
+                        beginAtZero:true
+                    }
+                }
+            }
+        }
+    );
+}
+
+document.getElementById("salaSelect")
+.addEventListener("change", e => {
+    serie = e.target.value;
+    carregar();
+});
+
+carregar();
+</script>
+
+</body>
+</html>
+
+
+verifique o motivo de não puxar o aluno 40 por exemplo 
