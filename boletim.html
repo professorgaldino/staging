@@ -396,6 +396,31 @@ th{
         white-space:nowrap;
     }
 }
+
+/* Popup de detalhes do gráfico do dashboard */
+.dashboard-detail-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:3000;
+    padding:20px;
+}
+.dashboard-detail-box{
+    width:min(620px, 94vw);
+    max-height:78vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    box-shadow:0 24px 70px rgba(15,23,42,.28);
+}
+.dashboard-detail-box h3{margin-top:0;}
+.dashboard-detail-list{margin:0;padding-left:22px;}
+.dashboard-detail-list li{margin:7px 0;}
+.dashboard-detail-actions{display:flex;justify-content:flex-end;margin-top:18px;}
 </style>
 </head>
 
@@ -470,6 +495,17 @@ th{
         </div>
 
         <div id="dashboardConteudo"></div>
+    </div>
+</div>
+
+
+<div id="popupDetalheDashboard" class="dashboard-detail-overlay" aria-hidden="true">
+    <div class="dashboard-detail-box">
+        <h3 id="dashboardDetalheTitulo">Alunos</h3>
+        <ul id="dashboardDetalheLista" class="dashboard-detail-list"></ul>
+        <div class="dashboard-detail-actions">
+            <button type="button" class="btn-dashboard" onclick="fecharDetalheDashboard()">Fechar</button>
+        </div>
     </div>
 </div>
 
@@ -1476,6 +1512,39 @@ function mostrarAluno(index){
     `;    atualizarOcorrenciasAluno(a, alunoBase, index);
 }
 
+function abrirDetalheDashboard(titulo, alunos){
+    const popup = document.getElementById("popupDetalheDashboard");
+    const tituloEl = document.getElementById("dashboardDetalheTitulo");
+    const listaEl = document.getElementById("dashboardDetalheLista");
+
+    if(!popup || !tituloEl || !listaEl) return;
+
+    tituloEl.textContent = titulo;
+    listaEl.innerHTML = "";
+
+    if(!alunos || alunos.length === 0){
+        const li = document.createElement("li");
+        li.textContent = "Nenhum aluno nesta categoria.";
+        listaEl.appendChild(li);
+    }else{
+        alunos.forEach(nome => {
+            const li = document.createElement("li");
+            li.textContent = nome;
+            listaEl.appendChild(li);
+        });
+    }
+
+    popup.style.display = "flex";
+    popup.setAttribute("aria-hidden", "false");
+}
+
+function fecharDetalheDashboard(){
+    const popup = document.getElementById("popupDetalheDashboard");
+    if(!popup) return;
+    popup.style.display = "none";
+    popup.setAttribute("aria-hidden", "true");
+}
+
 function abrirDashboard(){
     document.getElementById("popupDashboard").style.display = "block";
     gerarDashboard();
@@ -1503,6 +1572,7 @@ function gerarDashboard(){
     }
 
     const disciplinas = {};
+    const alunosPorCategoria = {};
     const alunosRisco = [];
     const alunosSemNota = [];
 
@@ -1520,6 +1590,11 @@ function gerarDashboard(){
                     ruins:0,
                     sem:0
                 };
+                alunosPorCategoria[disc] = {
+                    boas:[],
+                    ruins:[],
+                    sem:[]
+                };
             }
 
             const nota = numero(d.numero);
@@ -1532,10 +1607,12 @@ function gerarDashboard(){
             ){
                 if(alunoEstaAtivo){
                     disciplinas[disc].sem++;
+                    alunosPorCategoria[disc].sem.push(aluno.nome);
                     alunosSemNota.push(`${aluno.nome} - ${disc}`);
                 }
             }else if(nota < 5){
                 disciplinas[disc].ruins++;
+                alunosPorCategoria[disc].ruins.push(aluno.nome);
                 qtdNotasBaixas++;
                 notasBaixasAluno.push({
                     disciplina: disc,
@@ -1543,6 +1620,7 @@ function gerarDashboard(){
                 });
             }else{
                 disciplinas[disc].boas++;
+                alunosPorCategoria[disc].boas.push(aluno.nome);
             }
         }
 
@@ -1696,12 +1774,55 @@ function gerarDashboard(){
                 },
                 scales:{
                     y:{
-                        beginAtZero:true
+                        beginAtZero:true,
+                        ticks:{ precision:0 }
                     }
+                },
+                onClick:(evt, elements) => {
+                    if(!elements || elements.length === 0) return;
+
+                    const element = elements[0];
+                    const disciplina = labels[element.index];
+                    const datasetIndex = element.datasetIndex;
+                    const categoria = datasetIndex === 0 ? "boas" : (datasetIndex === 1 ? "ruins" : "sem");
+                    const nomes = alunosPorCategoria[disciplina]?.[categoria] || [];
+                    const descricao = categoria === "boas"
+                        ? "notas ≥ 5"
+                        : (categoria === "ruins" ? "notas < 5" : "sem nota");
+
+                    abrirDetalheDashboard(
+                        `Alunos com ${descricao} em ${disciplina}`,
+                        nomes
+                    );
                 }
             }
         }
     );
+}
+
+// Funções chamadas por atributos HTML (onclick/oninput/onchange).
+// Em script type=module elas não entram em window automaticamente,
+// portanto precisam ser expostas explicitamente.
+Object.assign(window, {
+    mostrarAluno,
+    abrirAlunoBusca,
+    buscarAlunoRapido,
+    atalhoBuscaAluno,
+    abrirDashboard,
+    fecharDashboard,
+    gerarDashboard,
+    abrirDetalheDashboard,
+    fecharDetalheDashboard
+});
+
+// Também fecha o detalhe ao clicar fora da caixa.
+const popupDetalheDashboard = document.getElementById("popupDetalheDashboard");
+if(popupDetalheDashboard){
+    popupDetalheDashboard.addEventListener("click", event => {
+        if(event.target === popupDetalheDashboard){
+            fecharDetalheDashboard();
+        }
+    });
 }
 
 document.getElementById("salaSelect")
@@ -1718,3 +1839,4 @@ carregar();
 
 
 verifique o motivo de não puxar o aluno 40 por exemplo 
+
