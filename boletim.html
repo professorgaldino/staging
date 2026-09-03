@@ -890,49 +890,80 @@ function pegarAlunoBimestre(alunoReferencia, n){
     const dados = dadosBimestres[n];
     if(!dados) return null;
 
-    const lista = Object.values(dados);
     const cadastro = acharCadastroAluno(alunoReferencia) || alunoReferencia || {};
-    const raReferencia = normalizarRA(cadastro.ra || alunoReferencia?.ra);
-    const nomeReferencia = normalizar(
-        cadastro.name || cadastro.nome || alunoReferencia?.name || alunoReferencia?.nome
-    );
+
     const numeroReferencia = String(
-        cadastro.number ?? cadastro.numero ?? alunoReferencia?.number ?? alunoReferencia?.numero ?? ""
+        cadastro.number ??
+        cadastro.numero ??
+        alunoReferencia?.number ??
+        alunoReferencia?.numero ??
+        ""
+    ).trim();
+
+    const nomeReferencia = normalizar(
+        cadastro.name ||
+        cadastro.nome ||
+        alunoReferencia?.name ||
+        alunoReferencia?.nome ||
+        ""
     );
 
-    // Se os JSONs passarem a trazer RA, ele será sempre a primeira chave de vínculo.
-    if(raReferencia){
-        const porRa = lista.find(a => normalizarRA(a.ra || a.RA) === raReferencia);
-        if(porRa) return porRa;
-    }
+    const raReferencia = normalizarRA(
+        cadastro.ra || alunoReferencia?.ra || ""
+    );
 
-    if(nomeReferencia){
-        const porNome = lista.filter(a => normalizar(a.nome || a.name) === nomeReferencia);
+    /*
+     * Os JSONs acadêmicos são estruturados pela chave do número de chamada:
+     * {
+     *   "40": { "numero": 40, "nome": "...", ... }
+     * }
+     *
+     * Por isso, esta é a PRIMEIRA forma de associação para notas/faltas.
+     * Isso também resolve alunos que surgem apenas a partir do 2º bimestre.
+     */
+    if(numeroReferencia){
+        const chaveDireta = dados[numeroReferencia];
 
-        if(porNome.length){
-            if(numeroReferencia){
-                const mesmoNumero = porNome.find(a =>
-                    String(a.numero ?? a.number ?? "") === numeroReferencia
-                );
-                if(mesmoNumero) return mesmoNumero;
-            }
+        if(chaveDireta){
+            return chaveDireta;
+        }
 
-            return porNome[0];
+        // Compatibilidade caso a chave externa não seja o número de chamada.
+        const porNumero = Object.values(dados).find(aluno =>
+            String(aluno?.numero ?? aluno?.number ?? "").trim() === numeroReferencia
+        );
+
+        if(porNumero){
+            return porNumero;
         }
     }
 
-    // Último recurso: número de chamada dentro do JSON da própria turma/bimestre.
-    // Só é usado quando RA e nome não localizaram o aluno.
-    if(numeroReferencia){
-        const porNumero = lista.filter(a =>
-            String(a.numero ?? a.number ?? "") === numeroReferencia
+    const lista = Object.values(dados);
+
+    // Segunda tentativa: nome normalizado (ignora acentos, caixa e espaços extras).
+    if(nomeReferencia){
+        const porNome = lista.find(aluno =>
+            normalizar(aluno?.nome || aluno?.name || "") === nomeReferencia
         );
-        if(porNumero.length === 1) return porNumero[0];
+
+        if(porNome){
+            return porNome;
+        }
+    }
+
+    // Terceira tentativa: RA, caso algum JSON passe a fornecê-lo futuramente.
+    if(raReferencia){
+        const porRa = lista.find(aluno =>
+            normalizarRA(aluno?.ra || aluno?.RA || "") === raReferencia
+        );
+
+        if(porRa){
+            return porRa;
+        }
     }
 
     return null;
 }
-
 function pegarAlunoQualquerBimestre(alunoReferencia){
     for(let b = 1; b <= 4; b++){
         const aluno = pegarAlunoBimestre(alunoReferencia, b);
