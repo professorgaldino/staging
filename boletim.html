@@ -289,7 +289,19 @@ th{
     font-weight:bold;
     padding:7px 9px;
     border-radius:9px;
+}
+
+/* IMPORTANTE: não transformar células <td> em inline-block.
+   Isso quebrava colspan e deslocava os dados de um bimestre para outro. */
+span.nao-lancado,
+div.nao-lancado{
     display:inline-block;
+}
+
+td.nao-lancado{
+    display:table-cell;
+    border-radius:0;
+    vertical-align:middle;
 }
 
 .baixa-nota{
