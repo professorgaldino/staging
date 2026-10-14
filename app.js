@@ -1,3 +1,4 @@
+import { photoValue, findPhoto, studentOccurrences } from "./student-links.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInAnonymously, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 import { collection, deleteDoc, doc, endAt, getCountFromServer, getDoc, getDocs, getFirestore, limit, orderBy, query, serverTimestamp, setDoc, startAfter, startAt, Timestamp, updateDoc, where, writeBatch } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
@@ -11,7 +12,7 @@ const state={studentCache:new Map(),students:[],currentClass:"",isMaster:false,o
 const $=selector=>document.querySelector(selector),$$=selector=>[...document.querySelectorAll(selector)];
 const escapeHtml=value=>{const div=document.createElement("div");div.textContent=value??"";return div.innerHTML};
 const normalize=value=>String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim();
-const normalizeRa=value=>String(value||"").replace(/\D/g,"").replace(/^0+(?=\d)/,"");
+const normalizeRa=value=>String(value??"").replace(/\D/g,"").replace(/^0+(?=\d)/,"");
 const dateOnly=value=>{const text=String(value||"").slice(0,10);return text.includes("/")?text.split("/").reverse().join("-"):text};
 const formatDate=value=>{if(!value)return"—";const[y,m,d]=dateOnly(value).split("-");return d&&m&&y?`${d}/${m}/${y}`:value};
 const extractArray=json=>Array.isArray(json)?json:Object.values(json||{}).find(Array.isArray)||[];
@@ -31,7 +32,7 @@ function querySiceClass(classId){return new Promise((resolve,reject)=>{const cal
 function convertSiceClass(classId,table){const students=[],rows=table?.rows||[];for(let index=0;index<rows.length;index++){const row=rows[index],cells=Array.from({length:10},(_,column)=>siceCell(row,column));if(/^N[AÃ]O ATIVOS$/i.test(cells[0]))break;if(!cells[3]||!normalizeRa(cells[4]))continue;students.push({type:cells[0]||(/^[6-9]/.test(classId)?"EF":"EM"),segment:cells[0]||(/^[6-9]/.test(classId)?"EF":"EM"),classId,number:Number(cells[2])||"",name:cells[3],ra:cells[4],digit:cells[5].replace(/\.0+$/,""),tutor:cells[6],birthday:siceDate(cells[7]),age:Number(cells[8])||"",elective:cells[9],active:true,sourceRow:index+2,sourceSystem:"SIGFRE/SICE"})}return students}
 async function loadSiceStudents(){const students=[];for(let index=0;index<CLASSES.length;index++){const classId=CLASSES[index];$("#connectionText").textContent=`Lendo SICE ${classId} (${index+1}/${CLASSES.length})`;students.push(...convertSiceClass(classId,await querySiceClass(classId)))}return students}
 
-function adaptStudent(raw,index){const ra=String(raw.ra||raw.RA||""),digit=String(raw.digit||raw.digito||""),status=normalize(raw.situacao||raw.status),explicitActive=raw.active;const active=explicitActive!==undefined?[true,"true",1,"1","sim","ativo"].includes(typeof explicitActive==="string"?normalize(explicitActive):explicitActive):(status?status==="ativo":true);return{id:String(raw.id||`ra-${normalizeRa(ra)}-${normalizeRa(digit)||index}`),name:String(raw.name||raw.nome||"Aluno sem nome"),ra,digit,classId:String(raw.classId||raw.sala||raw.Sala||"").toUpperCase(),number:Number(raw.number||raw.numero)||"",tutor:String(raw.tutor||raw.Tutor||""),elective:String(raw.elective||raw.eletiva1||raw.elective1||""),birthday:String(raw.birthday||raw.nascimento||""),photoUrl:String(raw.photoUrl||raw.foto||""),active}}
+function adaptStudent(raw,index){const ra=String(raw.ra||raw.RA||""),digit=String(raw.digit??raw.digito??""),status=normalize(raw.situacao||raw.status),explicitActive=raw.active;const active=explicitActive!==undefined?[true,"true",1,"1","sim","ativo"].includes(typeof explicitActive==="string"?normalize(explicitActive):explicitActive):(status?status==="ativo":true);return{id:String(raw.id||`ra-${normalizeRa(ra)}-${normalizeRa(digit)||index}`),name:String(raw.name||raw.nome||"Aluno sem nome"),ra,digit,classId:String(raw.classId||raw.sala||raw.Sala||"").toUpperCase(),number:Number(raw.number||raw.numero)||"",tutor:String(raw.tutor||raw.Tutor||""),elective:String(raw.elective||raw.eletiva1||raw.elective1||""),birthday:String(raw.birthday||raw.nascimento||""),photoUrl:photoValue(raw),eletiva2:String(raw.eletiva2||raw.elective2||""),active}}
 function field(raw,keys){for(const key of keys)if(raw[key]!==undefined&&raw[key]!==null)return raw[key];return""}
 function adaptOccurrence(raw,index){const ra=String(field(raw,["studentRa","ra","RA"])),name=String(field(raw,["studentName","nome","Nome do Aluno","aluno"]));return{id:String(raw.id||`occ-${index}`),studentId:String(raw.studentId||`ra-${normalizeRa(ra)}`),studentRa:ra,studentName:name,classId:String(field(raw,["classId","Sala","sala"])).toUpperCase(),tutor:String(field(raw,["tutor","Tutor"])),eventDate:dateOnly(field(raw,["eventDate","Data do Fato","dataFato"])),eventTime:String(field(raw,["eventTime","Hora do Fato","horaFato"])),category:String(field(raw,["category","Categoria","tipo"])||"Registro geral"),description:String(field(raw,["description","Descrição","descricao"])),teacher:String(field(raw,["teacher","Professor","professor"])),actionTaken:String(field(raw,["actionTaken","Ação Tomada","acao"]))}}
 function drivePhoto(value){if(!value)return"";const text=String(value).trim(),match=text.match(/(?:\/d\/|id=)([-\w]{15,})/),id=match?.[1]||(/^[-\w]{15,}$/.test(text)?text:"");return id?`https://lh3.googleusercontent.com/d/${id}=w600`:text}
@@ -50,7 +51,7 @@ async function loadStudentsForClass(classId,{fresh=false}={}){
 async function selectStudentClass(classId,fresh=false){
   state.currentClass=classId;$("#studentSearch").disabled=!classId;if(!classId){state.students=[];$("#studentGrid").innerHTML=`<div class="empty">Selecione uma turma para carregar somente os alunos solicitados.</div>`;$("#resultCount").textContent="0 resultados";return}
   $("#studentGrid").innerHTML=`<div class="empty">Carregando ${classId}...</div>`;
-  try{state.students=await loadStudentsForClass(classId,{fresh});renderStudents();$("#studentCount").textContent=state.students.length;$("#classCount").textContent=`alunos carregados da turma ${classId}`}
+  try{const students=await loadStudentsForClass(classId,{fresh});if(state.currentClass!==classId)return;state.students=students;renderStudents();$("#studentCount").textContent=state.students.length;$("#classCount").textContent=`alunos carregados da turma ${classId}`}
   catch(error){console.error(error);$("#studentGrid").innerHTML=`<div class="empty">Não foi possível carregar a turma. Confirme se a sincronização do Villani criou os documentos na coleção students.</div>`}
 }
 
@@ -58,8 +59,8 @@ function renderStudents(){const term=normalize($("#studentSearch").value),list=s
 
 function studentOptions(students){return`<option value="">Todos os alunos</option>`+students.map(item=>`<option value="${escapeHtml(item.id)}">${escapeHtml(item.name)} · RA ${escapeHtml(item.ra)}</option>`).join("")}
 async function populateStudentsFor(selectId,classId,allLabel="Selecione o aluno"){
-  const select=$("#"+selectId);select.disabled=true;select.innerHTML=`<option value="">Carregando...</option>`;if(!classId){select.innerHTML=`<option value="">${allLabel}</option>`;return[]}
-  try{const students=await loadStudentsForClass(classId);select.innerHTML=studentOptions(students);if(allLabel!=="Todos os alunos")select.options[0].textContent=allLabel;select.disabled=false;return students}catch{select.innerHTML=`<option value="">Erro ao carregar</option>`;return[]}
+  const select=$("#"+selectId);const request=Symbol();select._studentRequest=request;select.disabled=true;select.innerHTML=`<option value="">Carregando...</option>`;if(!classId){select.innerHTML=`<option value="">${allLabel}</option>`;return[]}
+  try{const students=await loadStudentsForClass(classId);if(select._studentRequest!==request)return[];select.innerHTML=studentOptions(students);if(allLabel!=="Todos os alunos")select.options[0].textContent=allLabel;select.disabled=false;return students}catch{select.innerHTML=`<option value="">Erro ao carregar</option>`;return[]}
 }
 function findStudent(id){for(const students of state.studentCache.values()){const found=students.find(item=>item.id===id);if(found)return found}return null}
 
@@ -69,13 +70,17 @@ function setOccurrenceDateState(disabled){[$("#dateFrom"),$("#dateTo")].forEach(
 function occurrenceOrder(){return $("#dateFrom").value||$("#dateTo").value?orderBy("eventDate","desc"):orderBy("createdAt","desc")}
 function occurrenceQuery(afterDocument=null,pageSize=PAGE_SIZE){const constraints=[...occurrenceBaseConstraints(),occurrenceOrder()];if(afterDocument)constraints.push(startAfter(afterDocument));constraints.push(limit(pageSize));return query(collection(db,"occurrences"),...constraints)}
 
+let occurrenceRequest=0;
 async function resetOccurrencePagination(){
+  const request=++occurrenceRequest;
   state.occurrencePages=[];state.occurrencePage=0;$("#occurrenceList").innerHTML=`<div class="empty">Carregando ocorrências...</div>`;
   try{
     const student=activeOccurrenceStudent(),classId=$("#occurrenceClass").value,from=$("#dateFrom").value,to=$("#dateTo").value;
     if(student){
-      let snapshot=await getDocs(query(collection(db,"occurrences"),where("studentName","==",student.name))),entries=snapshot.docs.map((entry,index)=>({doc:entry,item:adaptOccurrence({id:entry.id,...entry.data()},index)})).filter(entry=>!student.classId||entry.item.classId===student.classId);
-      if(!entries.length){snapshot=await getDocs(query(collection(db,"occurrences"),where("studentId","==",student.id)));entries=snapshot.docs.map((entry,index)=>({doc:entry,item:adaptOccurrence({id:entry.id,...entry.data()},index)}))}
+      const documents=await studentOccurrences(db,{getDocs,query,collection,where},student);
+      if(request!==occurrenceRequest)return;
+      const entries=documents.map((entry,index)=>({doc:entry,item:adaptOccurrence({id:entry.id,...entry.data()},index)}));
+      if(request!==occurrenceRequest)return;
       entries.sort((a,b)=>`${b.item.eventDate} ${b.item.eventTime}`.localeCompare(`${a.item.eventDate} ${a.item.eventTime}`));state.occurrenceTotal=entries.length;
       for(let start=0;start<entries.length;start+=PAGE_SIZE){const slice=entries.slice(start,start+PAGE_SIZE);state.occurrencePages.push({docs:slice.map(entry=>entry.doc),items:slice.map(entry=>entry.item)})}
       if(!state.occurrencePages.length)state.occurrencePages.push({docs:[],items:[]});showOccurrencePage(0);return
@@ -86,13 +91,14 @@ async function resetOccurrencePagination(){
       for(let start=0;start<entries.length;start+=PAGE_SIZE){const slice=entries.slice(start,start+PAGE_SIZE);state.occurrencePages.push({docs:slice.map(entry=>entry.doc),items:slice.map(entry=>entry.item)})}
       if(!state.occurrencePages.length)state.occurrencePages.push({docs:[],items:[]});showOccurrencePage(0);return
     }
-    const countSnapshot=await getCountFromServer(query(collection(db,"occurrences"),...occurrenceBaseConstraints(),occurrenceOrder()));state.occurrenceTotal=countSnapshot.data().count;await loadOccurrencePage(0)
+    const countSnapshot=await getCountFromServer(query(collection(db,"occurrences"),...occurrenceBaseConstraints(),occurrenceOrder()));if(request!==occurrenceRequest)return;state.occurrenceTotal=countSnapshot.data().count;await loadOccurrencePage(0)
   }catch(error){console.error(error);$("#occurrenceList").innerHTML=`<div class="empty">Não foi possível consultar as ocorrências. ${escapeHtml(error.code||error.message||"")}</div>`}
 }
 async function loadOccurrencePage(index){
+  const request=occurrenceRequest;
   if(index<0)return;if(state.occurrencePages[index]){showOccurrencePage(index);return}
   const previous=index>0?state.occurrencePages[index-1]:null,after=previous?.docs.at(-1)||null;$("#occurrenceList").innerHTML=`<div class="empty">Carregando página ${index+1}...</div>`;
-  const snapshot=await getDocs(occurrenceQuery(after));const page={docs:snapshot.docs,items:snapshot.docs.map((entry,i)=>adaptOccurrence({id:entry.id,...entry.data()},i))};state.occurrencePages[index]=page;showOccurrencePage(index)
+  const snapshot=await getDocs(occurrenceQuery(after));if(request!==occurrenceRequest)return;const page={docs:snapshot.docs,items:snapshot.docs.map((entry,i)=>adaptOccurrence({id:entry.id,...entry.data()},i))};state.occurrencePages[index]=page;showOccurrencePage(index)
 }
 function showOccurrencePage(index){state.occurrencePage=index;const page=state.occurrencePages[index],student=activeOccurrenceStudent(),classId=$("#occurrenceClass").value,hasPeriod=$("#dateFrom").value||$("#dateTo").value;state.occurrenceDocs=page.docs;state.occurrences=page.items;renderOccurrences();$("#occurrenceCount").textContent=student?`${state.occurrenceTotal} ocorrências de ${student.name}`:classId?`${state.occurrenceTotal} ocorrências da turma ${classId}${hasPeriod?" no período":""}`:hasPeriod?`${state.occurrenceTotal} ocorrências no período`:`${state.occurrenceTotal} registros`;$("#occurrencePage").textContent=`Página ${index+1} de ${Math.max(1,Math.ceil(state.occurrenceTotal/PAGE_SIZE))}`;$("#previousOccurrence").disabled=index===0;$("#nextOccurrence").disabled=(index+1)*PAGE_SIZE>=state.occurrenceTotal||page.docs.length<PAGE_SIZE}
 function renderOccurrences(){const student=activeOccurrenceStudent(),term=student?"":normalize($("#occurrenceSearch").value),from=$("#dateFrom").value,to=$("#dateTo").value,ignoreDates=Boolean(student);const list=state.occurrences.filter(item=>(!term||normalize(`${item.studentName} ${item.studentRa} ${item.description}`).includes(term))&&(ignoreDates||!from||item.eventDate>=from)&&(ignoreDates||!to||item.eventDate<=to));$("#occurrenceList").innerHTML=list.length?list.map(item=>`<article class="occurrence ${state.isMaster?"master-occurrence":""}"><div class="date"><b>${escapeHtml(formatDate(item.eventDate).slice(0,5))}</b><span>${escapeHtml(item.eventTime||"—")}</span></div><div class="occ-body"><header><div><h3>${escapeHtml(item.studentName)}</h3><small>${escapeHtml(item.classId)} · RA ${escapeHtml(item.studentRa||"—")}</small></div>${state.isMaster?`<button class="edit-button" data-edit-occurrence="${escapeHtml(item.id)}">Editar</button>`:""}</header><p>${escapeHtml(item.description||"Sem descrição.")}</p><footer>${item.tutor?`<span>Tutor: <b>${escapeHtml(item.tutor)}</b></span>`:""}${item.teacher?`<span>Professor: <b>${escapeHtml(item.teacher)}</b></span>`:""}${item.actionTaken?`<span>Ação: <b>${escapeHtml(item.actionTaken)}</b></span>`:""}</footer></div></article>`).join(""):`<div class="empty">Nenhuma ocorrência nesta página.</div>`;bindDynamic()}
@@ -134,10 +140,10 @@ $("#syncStudentsButton").onclick=async()=>{
   try{
     await auth.currentUser.getIdToken(true);syncStage="ler as 18 turmas do SIGFRE/SICE";const raw=await loadSiceStudents();if(!raw.length)throw new Error("A planilha SICE respondeu sem alunos");
     const uniqueStudents=new Map();raw.map(adaptStudent).filter(item=>item.active&&item.name&&normalizeRa(item.ra)).forEach(student=>{const id=canonicalStudentId(student);uniqueStudents.set(id,{...student,id,active:true,nameSearch:normalize(student.name)})});
-    syncStage="recuperar as fotos do Drive";const photoRows=extractArray(await fetchJsonFresh(studentsPhotoSyncUrl,5)),photosByRa=new Map(),photosByName=new Map();photoRows.forEach((entry,index)=>{const legacy=adaptStudent(entry,index),photo=legacy.photoUrl;if(!photo)return;const ra=normalizeRa(legacy.ra)+normalizeRa(legacy.digit),nameKey=legacy.classId+"|"+normalize(legacy.name);if(ra)photosByRa.set(ra,photo);if(legacy.classId&&legacy.name)photosByName.set(nameKey,photo)});uniqueStudents.forEach(student=>{student.photoUrl=photosByRa.get(normalizeRa(student.ra)+normalizeRa(student.digit))||photosByName.get(student.classId+"|"+normalize(student.name))||student.photoUrl});
+    syncStage="recuperar as fotos do Drive";const photoRows=extractArray(await fetchJsonFresh(studentsPhotoSyncUrl,5));uniqueStudents.forEach(student=>{student.photoUrl=findPhoto(photoRows,student)});
     syncStage="ler o resumo anterior dos alunos";
     const previousSync=await getDoc(doc(db,"settings","students-sync")),operations=[],activeIds=[...uniqueStudents.keys()];
-    let existingSnapshot=null;if(previousSync.data()?.sourceSystem!=="SIGFRE/SICE"){syncStage="migrar fotos e cadastros para os IDs corretos do SICE";existingSnapshot=await getDocs(collection(db,"students"));const photosByKey=new Map(),photosByName=new Map();existingSnapshot.docs.forEach((entry,index)=>{const student=adaptStudent({id:entry.id,...entry.data()},index);if(!student.photoUrl)return;photosByKey.set(normalizeRa(student.ra)+normalizeRa(student.digit),student.photoUrl);photosByName.set(student.classId+"|"+normalize(student.name),student.photoUrl)});uniqueStudents.forEach(student=>{student.photoUrl=photosByKey.get(normalizeRa(student.ra)+normalizeRa(student.digit))||photosByName.get(student.classId+"|"+normalize(student.name))||student.photoUrl})}
+    let existingSnapshot=null;if(previousSync.data()?.sourceSystem!=="SIGFRE/SICE"){syncStage="migrar fotos e cadastros para os IDs corretos do SICE";existingSnapshot=await getDocs(collection(db,"students"));const existingRows=existingSnapshot.docs.map(entry=>entry.data());uniqueStudents.forEach(student=>{if(!student.photoUrl)student.photoUrl=findPhoto(existingRows,student)})}
     for(const student of uniqueStudents.values()){const data={...student,syncSource:"SIGFRE/SICE",syncedAt:serverTimestamp()};if(!data.photoUrl)delete data.photoUrl;operations.push({type:"set",ref:doc(db,"students",student.id),data,options:{merge:true}})}
     if(existingSnapshot)existingSnapshot.docs.forEach(entry=>{if(!uniqueStudents.has(entry.id))operations.push({type:"delete",ref:entry.ref})});else if(Array.isArray(previousSync.data()?.activeIds))previousSync.data().activeIds.forEach(id=>{if(!uniqueStudents.has(id))operations.push({type:"delete",ref:doc(db,"students",id)})});
     syncStage="gravar "+uniqueStudents.size+" alunos ativos no Firestore";await commitOperations(operations);const written=uniqueStudents.size,removed=operations.filter(item=>item.type==="delete").length;

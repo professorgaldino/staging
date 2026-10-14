@@ -1,0 +1,12 @@
+Correções realizadas em 14/10/2026
+
+Publicação: substitua os arquivos do site pelo conteúdo desta pasta. Inclua student-links.js, necessário para app.js e boletim.html. O arquivo index.html atualiza a versão de app.js para evitar o uso da cópia antiga em cache.
+
+Fotos: compatibilidade com photoUrl, fotoUrl, foto e photo; vínculo por RA com ou sem dígito, com fallback por nome e turma. Fotos ambíguas não são atribuídas automaticamente.
+Boletins: vínculo por RA quando disponível ou nome normalizado; número de chamada desambigua nomes repetidos, sem aceitar um nome conflitante. Arquivos de bimestres inexistentes continuam como Não lançado. Adicione depois os arquivos atb.json e aqb.json correspondentes às turmas.
+Ocorrências: união por ID, variantes de RA, nome e turma, sem duplicar documentos. Histórico ligado por ID/RA continua disponível mesmo após mudança de turma. RA conflitante impede associação apenas por nome.
+Troca de seleção: consultas atrasadas não substituem os resultados mais recentes nos carregamentos corrigidos.
+
+Validação local: sintaxe do JavaScript e do script do boletim; 1.584 registros acadêmicos; aluno 40 do 7A; aluno sem boletim; nomes repetidos; RA divergente; aliases de fotos; ocorrências antigas e novas e remoção de duplicatas.
+
+Limites: banco de dados e site publicado não foram alterados. A validação local não confirma permissões de acesso às imagens do Drive nem a integridade dos cadastros reais. Para fotos que não foram importadas anteriormente, execute a sincronização de alunos no acesso master após publicar. Confira o resultado da sincronização e os alunos afetados.

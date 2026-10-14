@@ -526,6 +526,7 @@ td.nao-lancado{
 </div>
 
 <script type="module">
+import { academicStudent, studentOccurrences } from "./student-links.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { collection, getDocs, getFirestore, query, where } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
@@ -549,6 +550,8 @@ const BIMESTRES = {
 };
 
 let serie = "6a";
+let classRequest = 0;
+let studentRequest = 0;
 let alunosFirestore = [];
 const cacheOcorrencias = new Map();
 let dadosBimestres = {};
@@ -725,7 +728,7 @@ async function carregarAlunosFirestore(){
             name: String(raw.name || raw.nome || "Aluno sem nome"),
             nome: String(raw.name || raw.nome || "Aluno sem nome"),
             ra: String(raw.ra || raw.RA || ""),
-            digit: String(raw.digit || raw.digito || ""),
+            digit: String(raw.digit ?? raw.digito ?? ""),
             classId: String(raw.classId || raw.sala || raw.Sala || classId).toUpperCase(),
             number: raw.number ?? raw.numero ?? "",
             numero: raw.number ?? raw.numero ?? "",
@@ -822,37 +825,8 @@ async function consultarOcorrenciasAluno(alunoBoletim, cadastro){
         return cacheOcorrencias.get(chaveCache);
     }
 
-    const documentos = new Map();
-
-    async function consultarCampo(campo, valor){
-        if(!valor) return;
-
-        const snapshot = await getDocs(
-            query(collection(db, "occurrences"), where(campo, "==", valor))
-        );
-
-        snapshot.docs.forEach(docSnap => {
-            const item = adaptarOcorrenciaFirestore(docSnap);
-
-            if(classId && item.classId && item.classId !== classId){
-                return;
-            }
-
-            documentos.set(docSnap.id, item);
-        });
-    }
-
-    // Vínculo principal: ID oficial do aluno no Firestore.
-    await consultarCampo("studentId", studentId);
-
-    // Compatibilidade com registros antigos ou alunos ainda não encontrados pelo ID.
-    if(documentos.size === 0){
-        await consultarCampo("studentRa", ra);
-    }
-
-    if(documentos.size === 0){
-        await consultarCampo("studentName", nome);
-    }
+    const entries = await studentOccurrences(db, {getDocs, query, collection, where}, {id:studentId, ra, digit:cadastro?.digit || "", name:nome, classId});
+    const documentos = new Map(entries.map(entry => [entry.id, adaptarOcorrenciaFirestore(entry)]));
 
     const lista = [...documentos.values()].sort((a, b) =>
         `${b.eventDate || ""} ${b.eventTime || ""}`.localeCompare(
@@ -868,6 +842,8 @@ async function carregarBimestre(n){
     try{
         const arquivo = `${serie}${BIMESTRES[n]}.json`;
         const res = await fetch(arquivo);
+
+        if(res.status === 404) return null;
 
         if(!res.ok){
             throw new Error("Arquivo não encontrado: " + arquivo);
@@ -904,78 +880,9 @@ function pegarAlunoBimestre(alunoReferencia, n){
 
     const cadastro = acharCadastroAluno(alunoReferencia) || alunoReferencia || {};
 
-    const numeroReferencia = String(
-        cadastro.number ??
-        cadastro.numero ??
-        alunoReferencia?.number ??
-        alunoReferencia?.numero ??
-        ""
-    ).trim();
-
-    const nomeReferencia = normalizar(
-        cadastro.name ||
-        cadastro.nome ||
-        alunoReferencia?.name ||
-        alunoReferencia?.nome ||
-        ""
-    );
-
-    const raReferencia = normalizarRA(
-        cadastro.ra || alunoReferencia?.ra || ""
-    );
-
-    /*
-     * Os JSONs acadêmicos são estruturados pela chave do número de chamada:
-     * {
-     *   "40": { "numero": 40, "nome": "...", ... }
-     * }
-     *
-     * Por isso, esta é a PRIMEIRA forma de associação para notas/faltas.
-     * Isso também resolve alunos que surgem apenas a partir do 2º bimestre.
-     */
-    if(numeroReferencia){
-        const chaveDireta = dados[numeroReferencia];
-
-        if(chaveDireta){
-            return chaveDireta;
-        }
-
-        // Compatibilidade caso a chave externa não seja o número de chamada.
-        const porNumero = Object.values(dados).find(aluno =>
-            String(aluno?.numero ?? aluno?.number ?? "").trim() === numeroReferencia
-        );
-
-        if(porNumero){
-            return porNumero;
-        }
-    }
-
-    const lista = Object.values(dados);
-
-    // Segunda tentativa: nome normalizado (ignora acentos, caixa e espaços extras).
-    if(nomeReferencia){
-        const porNome = lista.find(aluno =>
-            normalizar(aluno?.nome || aluno?.name || "") === nomeReferencia
-        );
-
-        if(porNome){
-            return porNome;
-        }
-    }
-
-    // Terceira tentativa: RA, caso algum JSON passe a fornecê-lo futuramente.
-    if(raReferencia){
-        const porRa = lista.find(aluno =>
-            normalizarRA(aluno?.ra || aluno?.RA || "") === raReferencia
-        );
-
-        if(porRa){
-            return porRa;
-        }
-    }
-
-    return null;
+    return academicStudent(dados, cadastro);
 }
+
 function pegarAlunoQualquerBimestre(alunoReferencia){
     for(let b = 1; b <= 4; b++){
         const aluno = pegarAlunoBimestre(alunoReferencia, b);
@@ -1007,6 +914,8 @@ function pegarDisciplinasAluno(alunoReferencia){
 }
 
 async function carregar(){
+    const request = ++classRequest;
+    ++studentRequest;
     const box = document.getElementById("boletim");
     const nav = document.getElementById("navegacaoAlunos");
     const busca = document.getElementById("buscaAluno");
@@ -1028,7 +937,9 @@ async function carregar(){
     alunosFirestore = [];
 
     try{
-        await carregarAlunos();
+        const students = await carregarAlunosFirestore();
+        if(request !== classRequest) return;
+        alunosFirestore = students;
     }catch(error){
         box.innerHTML = `
         <div class="nao-lancado">
@@ -1039,7 +950,9 @@ async function carregar(){
     }
 
     for(let i = 1; i <= 4; i++){
-        dadosBimestres[i] = await carregarBimestre(i);
+        const data = await carregarBimestre(i);
+        if(request !== classRequest) return;
+        dadosBimestres[i] = data;
     }
 
     montarNavegacao();
@@ -1147,7 +1060,7 @@ async function atualizarOcorrenciasAluno(alunoBoletim, cadastro, tokenAluno){
         const lista = await consultarOcorrenciasAluno(alunoBoletim, cadastro);
 
         // Impede uma consulta antiga de sobrescrever a tela se o usuário trocar de aluno rapidamente.
-        if(tokenAluno !== indiceAtual) return;
+        if(tokenAluno !== studentRequest) return;
 
         const alvo = document.getElementById("ocorrenciasAlunoAtual");
         if(alvo){
@@ -1156,7 +1069,7 @@ async function atualizarOcorrenciasAluno(alunoBoletim, cadastro, tokenAluno){
     }catch(error){
         console.error("Erro ao consultar ocorrências no Firestore:", error);
 
-        if(tokenAluno !== indiceAtual) return;
+        if(tokenAluno !== studentRequest) return;
 
         const alvo = document.getElementById("ocorrenciasAlunoAtual");
         if(alvo){
@@ -1488,6 +1401,7 @@ function montarNavegacao(){
 }
 
 function mostrarAluno(index){
+    const request = ++studentRequest;
     indiceAtual = index;
 
     const botoes = document.querySelectorAll(".btn-aluno");
@@ -1552,7 +1466,7 @@ function mostrarAluno(index){
             ${montarTabelaUnica(a)}
         </div>
     </div>
-    `;    atualizarOcorrenciasAluno(a, alunoBase, index);
+    `;    atualizarOcorrenciasAluno(a, alunoBase, request);
 }
 
 function abrirDetalheDashboard(titulo, alunos){
