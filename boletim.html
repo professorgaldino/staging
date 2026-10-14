@@ -526,7 +526,8 @@ td.nao-lancado{
 </div>
 
 <script type="module">
-import { academicStudent, studentOccurrences } from "./student-links.js";
+import { completeStudentPhotos } from "./student-photos.js?v=20261014-5";
+import { academicStudent, studentOccurrences } from "./student-links.js?v=20261014-5";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { collection, getDocs, getFirestore, query, where } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
@@ -937,7 +938,7 @@ async function carregar(){
     alunosFirestore = [];
 
     try{
-        const students = await carregarAlunosFirestore();
+        const students = await completeStudentPhotos(await carregarAlunosFirestore());
         if(request !== classRequest) return;
         alunosFirestore = students;
     }catch(error){

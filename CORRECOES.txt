@@ -1,12 +1,16 @@
-Correções realizadas em 14/10/2026
+Sincronização direta do Drive — versão 14/10/2026
 
-Publicação: substitua os arquivos do site pelo conteúdo desta pasta. Inclua student-links.js, necessário para app.js e boletim.html. O arquivo index.html atualiza a versão de app.js para evitar o uso da cópia antiga em cache.
+Publique TODO o conteúdo desta pasta na raiz do staging, substituindo os arquivos. Inclua drive-config.js, drive-photos.js, student-links.js, student-photos.js e fotos-complementares.js. Atualize com Ctrl+F5.
 
-Fotos: compatibilidade com photoUrl, fotoUrl, foto e photo; vínculo por RA com ou sem dígito, com fallback por nome e turma. Fotos ambíguas não são atribuídas automaticamente.
-Boletins: vínculo por RA quando disponível ou nome normalizado; número de chamada desambigua nomes repetidos, sem aceitar um nome conflitante. Arquivos de bimestres inexistentes continuam como Não lançado. Adicione depois os arquivos atb.json e aqb.json correspondentes às turmas.
-Ocorrências: união por ID, variantes de RA, nome e turma, sem duplicar documentos. Histórico ligado por ID/RA continua disponível mesmo após mudança de turma. RA conflitante impede associação apenas por nome.
-Troca de seleção: consultas atrasadas não substituem os resultados mais recentes nos carregamentos corrigidos.
+No Acesso master:
+- Sincronizar fotos do Drive: percorre a pasta principal e todas as subpastas, identifica o RA com dígito no nome do arquivo e atualiza somente as fotos cujo vínculo mudou. Não altera nomes, turmas, notas ou ocorrências e não remove alunos nem fotos existentes quando não há correspondência.
+- Sincronizar alunos e fotos: mantém a importação de alunos da planilha SIGFRE/SICE que já existia e agora obtém os vínculos das fotos diretamente do Drive. Como antes, esta rotina atualiza a lista de alunos ativos; use o botão exclusivo de fotos quando quiser alterar apenas imagens.
+- Sincronizar ocorrências: mantém a consulta existente.
 
-Validação local: sintaxe do JavaScript e do script do boletim; 1.584 registros acadêmicos; aluno 40 do 7A; aluno sem boletim; nomes repetidos; RA divergente; aliases de fotos; ocorrências antigas e novas e remoção de duplicatas.
+Fluxo para fotos novas: adicione o arquivo na pasta da turma no Drive, com RA e dígito no nome (ex.: 0001200380897-LAURA SCORPIONI DOS SANTOS.jpeg), e clique em Sincronizar fotos do Drive. Se o aluno ainda não está no Firebase, use Sincronizar alunos e fotos depois de cadastrá-lo na planilha. Duas fotos diferentes para o mesmo RA são consideradas ambíguas; o vínculo existente é preservado até resolver a duplicidade.
 
-Limites: banco de dados e site publicado não foram alterados. A validação local não confirma permissões de acesso às imagens do Drive nem a integridade dos cadastros reais. Para fotos que não foram importadas anteriormente, execute a sincronização de alunos no acesso master após publicar. Confira o resultado da sincronização e os alunos afetados.
+Configuração: chave fornecida pelo usuário já incluída em drive-config.js. Mantenha no Google Cloud as restrições para https://professorgaldino.github.io/* e somente Google Drive API. Se usar outro domínio, inclua-o nas restrições. A chave de navegador é visível no código; sua proteção depende dessas restrições. Nenhuma mudança no Apps Script é necessária.
+
+Validação real: chave e pasta consultadas com sucesso; 646 fotos identificadas e correspondências da Laura e Mario nº 40 encontradas. Testes locais: paginação, subpastas, dígito X, RA divergente, duplicatas, erro de consulta, lista incompleta e lógica do botão com gravação no Firebase simulado. Sintaxe verificada.
+
+O site publicado e o Firebase real NÃO foram alterados. É necessário publicar e clicar no botão master para gravar os vínculos. As fotos precisam continuar acessíveis aos visitantes. A consulta da API depende das restrições do domínio e não funciona abrindo o HTML como arquivo local.

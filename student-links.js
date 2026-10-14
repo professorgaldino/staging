@@ -56,7 +56,9 @@ export function findPhoto(rows, student) {
     return base && other && (full === otherFull || base === other || full === other || base === otherFull);
   });
   if (byRa.length && new Set(byRa.map(photoValue)).size === 1) return photoValue(byRa[0]);
+  if (byRa.length) return photoValue(student);
   const byName = withPhotos.filter(row => cleanName(row.name || row.nome) === cleanName(student.name)
-    && String(row.classId || row.sala || row.Sala || '').toUpperCase() === student.classId);
+    && String(row.classId || row.sala || row.Sala || '').trim().toUpperCase() === String(student.classId || '').trim().toUpperCase()
+    && !(base && cleanRa(row.ra || row.RA)));
   return byName.length === 1 ? photoValue(byName[0]) : photoValue(student);
 }

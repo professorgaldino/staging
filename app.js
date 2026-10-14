@@ -1,4 +1,6 @@
-import { photoValue, findPhoto, studentOccurrences } from "./student-links.js";
+import { loadDrivePhotos, matchDrivePhoto, planPhotoUpdates } from "./drive-photos.js?v=20261014-5";
+import { completeStudentPhotos, loadPhotoCatalog, completeLocalPhotos } from "./student-photos.js?v=20261014-5";
+import { photoValue, findPhoto, studentOccurrences } from "./student-links.js?v=20261014-5";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInAnonymously, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 import { collection, deleteDoc, doc, endAt, getCountFromServer, getDoc, getDocs, getFirestore, limit, orderBy, query, serverTimestamp, setDoc, startAfter, startAt, Timestamp, updateDoc, where, writeBatch } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
@@ -25,7 +27,7 @@ function occurrenceTimestamp(value){
 }
 const canonicalStudentId=student=>`ra-${normalizeRa(student.ra)}-${normalizeRa(student.digit)||"0"}`;
 async function commitOperations(operations){for(let start=0;start<operations.length;start+=350){const batch=writeBatch(db);for(const operation of operations.slice(start,start+350)){if(operation.type==="delete")batch.delete(operation.ref);else batch.set(operation.ref,operation.data,operation.options||{})}await batch.commit()}}
-async function fetchJsonFresh(url,attempts=3){let lastError;for(let attempt=1;attempt<=attempts;attempt++){try{const separator=url.includes("?")?"&":"?",requestUrl=attempt===1?url:url+separator+"t="+Date.now()+"-"+attempt,response=await fetch(requestUrl,{cache:"no-store",redirect:"follow"});if(!response.ok)throw new Error("HTTP "+response.status);return await response.json()}catch(error){lastError=error;if(attempt<attempts)await new Promise(resolve=>setTimeout(resolve,700*attempt))}}throw lastError}
+async function fetchJsonFresh(url,attempts=3){let lastError;for(let attempt=1;attempt<=attempts;attempt++){try{const separator=url.includes("?")?"&":"?",requestUrl=url+separator+"t="+Date.now()+"-"+attempt,response=await fetch(requestUrl,{cache:"no-store",redirect:"follow"});if(!response.ok)throw new Error("HTTP "+response.status);return await response.json()}catch(error){lastError=error;if(attempt<attempts)await new Promise(resolve=>setTimeout(resolve,700*attempt))}}throw lastError}
 function siceCell(row,index){const cell=row?.c?.[index];return String(cell?.f??cell?.v??"").trim()}
 function siceDate(value){const text=String(value||""),br=text.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/),gviz=text.match(/^Date\((\d{4}),(\d{1,2}),(\d{1,2})/);if(br)return`${br[3]}-${br[2].padStart(2,"0")}-${br[1].padStart(2,"0")}`;if(gviz)return`${gviz[1]}-${String(Number(gviz[2])+1).padStart(2,"0")}-${gviz[3].padStart(2,"0")}`;return text.slice(0,10)}
 function querySiceClass(classId){return new Promise((resolve,reject)=>{const callback="villaniSice_"+Date.now()+"_"+Math.random().toString(36).slice(2),script=document.createElement("script");let timer;const cleanup=()=>{delete window[callback];script.remove();clearTimeout(timer)};timer=setTimeout(()=>{cleanup();reject(new Error("Tempo esgotado ao ler "+classId))},45000);window[callback]=response=>{cleanup();if(response?.status==="error")reject(new Error(response.errors?.[0]?.detailed_message||"Erro na aba "+classId));else resolve(response?.table)};const params=new URLSearchParams({sheet:classId,range:"A1:J120",tqx:"out:json;responseHandler:"+callback});script.src="https://docs.google.com/spreadsheets/d/"+SICE_SHEET_ID+"/gviz/tq?"+params;script.onerror=()=>{cleanup();reject(new Error("Não foi possível acessar a aba "+classId))};document.head.appendChild(script)})}
@@ -45,7 +47,7 @@ async function loadStudentsForClass(classId,{fresh=false}={}){
   if(!classId)return[];if(!fresh&&state.studentCache.has(classId))return state.studentCache.get(classId);
   const snapshot=await getDocs(query(collection(db,"students"),where("classId","==",classId)));
   const students=snapshot.docs.map((entry,index)=>adaptStudent({id:entry.id,...entry.data()},index)).filter(item=>item.active).sort((a,b)=>(a.number||999)-(b.number||999)||a.name.localeCompare(b.name,"pt-BR"));
-  state.studentCache.set(classId,students);return students;
+  const complete=await completeStudentPhotos(students);state.studentCache.set(classId,complete);return complete;
 }
 
 async function selectStudentClass(classId,fresh=false){
@@ -134,13 +136,16 @@ $("#formClass").onchange=event=>populateStudentsFor("formStudent",event.target.v
 $$('.tabs button').forEach(button=>button.onclick=()=>{openTab(button.dataset.tab);if(button.dataset.tab==="occurrences"&&!state.occurrencePages.length)resetOccurrencePagination()});$("#eventDate").value=new Date().toISOString().slice(0,10);$("#photoDialog button").onclick=()=>$("#photoDialog").close();
 
 $("#masterButton").onclick=async()=>{if(state.isMaster){await signOut(auth);await signInAnonymously(auth);message("Modo master encerrado.");return}$("#masterError").hidden=true;$("#masterPassword").value="";$("#masterDialog").showModal();setTimeout(()=>$("#masterPassword").focus(),100)};$("#masterDialog .dialog-close").onclick=()=>$("#masterDialog").close();$("#editDialog .dialog-close").onclick=()=>$("#editDialog").close();
+let studentsPhotosSyncRunning=false;
 $("#syncStudentsButton").onclick=async()=>{
+  if(studentsPhotosSyncRunning)return;
   if(!state.isMaster||!confirm("Ler as 18 abas da planilha SIGFRE/SICE e atualizar somente os alunos ativos no banco de dados?"))return;
+  studentsPhotosSyncRunning=true;$("#syncPhotosButton").disabled=true;
   const button=$("#syncStudentsButton");let syncStage="renovar a credencial master";button.disabled=true;button.textContent="Sincronizando...";$("#connectionText").textContent="Atualizando alunos";
   try{
     await auth.currentUser.getIdToken(true);syncStage="ler as 18 turmas do SIGFRE/SICE";const raw=await loadSiceStudents();if(!raw.length)throw new Error("A planilha SICE respondeu sem alunos");
     const uniqueStudents=new Map();raw.map(adaptStudent).filter(item=>item.active&&item.name&&normalizeRa(item.ra)).forEach(student=>{const id=canonicalStudentId(student);uniqueStudents.set(id,{...student,id,active:true,nameSearch:normalize(student.name)})});
-    syncStage="recuperar as fotos do Drive";const photoRows=extractArray(await fetchJsonFresh(studentsPhotoSyncUrl,5));uniqueStudents.forEach(student=>{student.photoUrl=findPhoto(photoRows,student)});
+    syncStage="recuperar as fotos do Drive";const photoRows=await loadDrivePhotos({onProgress:text=>{$("#connectionText").textContent=text}});if(!photoRows.length)throw new Error("A pasta do Drive respondeu sem fotos identificadas por RA. Nenhum aluno foi atualizado.");uniqueStudents.forEach(student=>{const match=matchDrivePhoto(photoRows,student);student.photoUrl=match.status==="matched"?match.photo:""});
     syncStage="ler o resumo anterior dos alunos";
     const previousSync=await getDoc(doc(db,"settings","students-sync")),operations=[],activeIds=[...uniqueStudents.keys()];
     let existingSnapshot=null;if(previousSync.data()?.sourceSystem!=="SIGFRE/SICE"){syncStage="migrar fotos e cadastros para os IDs corretos do SICE";existingSnapshot=await getDocs(collection(db,"students"));const existingRows=existingSnapshot.docs.map(entry=>entry.data());uniqueStudents.forEach(student=>{if(!student.photoUrl)student.photoUrl=findPhoto(existingRows,student)})}
@@ -151,7 +156,30 @@ $("#syncStudentsButton").onclick=async()=>{
     syncStage="salvar o índice e o resumo dos alunos";
     const metadataBatch=writeBatch(db);for(const classId of CLASSES)metadataBatch.set(doc(db,"classes",classId),{id:classId,name:classId,year:2026,active:true,syncSource:"SIGFRE/SICE"},{merge:true});metadataBatch.set(doc(db,"settings","student-index"),{students:studentIndex,records:written,sourceSystem:"SIGFRE/SICE",syncedAt:serverTimestamp()});metadataBatch.set(doc(db,"settings","students-sync"),{records:written,activeIds,sourceSystem:"SIGFRE/SICE",sheetId:SICE_SHEET_ID,syncedAt:serverTimestamp(),syncedBy:"fernando@villani.app"},{merge:true});await metadataBatch.commit();
     state.studentCache.clear();if(state.currentClass)await selectStudentClass(state.currentClass,true);$("#studentCount").textContent=written;$("#connectionText").textContent="Sincronização concluída";$("#lastSyncText").textContent=`Sincronização concluída agora · ${written} alunos ativos do SICE.`;message(`${written} alunos ativos do SICE mantidos; ${removed} documentos antigos removidos. Sincronize as ocorrências para atualizar os vínculos aos novos IDs.`);
-  }catch(error){console.error("Falha ao "+syncStage,error);$("#connectionText").textContent="Falha na sincronização";const detail=[error.code,error.message].filter(Boolean).join(" — ");message("Falha ao "+syncStage+(detail?": "+detail:"")+".",true)}finally{button.disabled=false;button.textContent="Sincronizar alunos"}
+  }catch(error){console.error("Falha ao "+syncStage,error);$("#connectionText").textContent="Falha na sincronização";const detail=[error.code,error.message].filter(Boolean).join(" — ");message("Falha ao "+syncStage+(detail?": "+detail:"")+".",true)}finally{studentsPhotosSyncRunning=false;$("#syncPhotosButton").disabled=false;button.disabled=false;button.textContent="Sincronizar alunos e fotos"}
+};
+$("#syncPhotosButton").onclick=async()=>{
+  if(!state.isMaster||studentsPhotosSyncRunning)return;
+  studentsPhotosSyncRunning=true;
+  const button=$("#syncPhotosButton");button.disabled=true;$("#syncStudentsButton").disabled=true;button.textContent="Sincronizando fotos...";
+  try{
+    await auth.currentUser.getIdToken(true);
+    const photos=await loadDrivePhotos({onProgress:text=>{$("#connectionText").textContent=text}});
+    if(!photos.length)throw new Error("Nenhuma foto com RA foi encontrada. Os vínculos atuais foram preservados.");
+    const snapshot=await getDocs(collection(db,"students"));
+    const students=snapshot.docs.map((entry,index)=>({...adaptStudent({...entry.data(),id:entry.id},index),id:entry.id}));
+    const plan=planPhotoUpdates(photos,students);
+    $("#connectionText").textContent="Atualizando fotos no Firebase";
+    const operations=plan.updates.map(item=>({type:"set",ref:doc(db,"students",item.student.id),data:{photoUrl:item.photoUrl,photoSource:"google-drive",photoSyncedAt:serverTimestamp()},options:{merge:true}}));
+    await commitOperations(operations);
+    state.studentCache.clear();
+    if(state.currentClass)await selectStudentClass(state.currentClass,true);
+    const formClass=$("#formClass").value,selected=$("#formStudent").value;
+    if(formClass){await populateStudentsFor("formStudent",formClass,"Selecione o aluno");$("#formStudent").value=selected;$("#formStudent").dispatchEvent(new Event("change"));}
+    $("#connectionText").textContent="Fotos sincronizadas";
+    message(plan.updates.length+" fotos atualizadas; "+plan.unchanged+" já estavam atualizadas; "+plan.missing+" alunos sem foto encontrada; "+plan.ambiguous+" com arquivos duplicados. Vínculos sem correspondência foram preservados.");
+  }catch(error){console.error("Falha na sincronização de fotos",error);$("#connectionText").textContent="Falha na sincronização de fotos";message("Não foi possível concluir: "+(error.message||error.code||"erro de consulta")+". Tente novamente para concluir eventuais lotes pendentes.",true);}
+  finally{studentsPhotosSyncRunning=false;button.disabled=false;$("#syncStudentsButton").disabled=false;button.textContent="Sincronizar fotos do Drive";}
 };
 $("#syncOccurrencesButton").onclick=async()=>{
   if(!state.isMaster||!confirm("Importar e atualizar no banco de dados as ocorrências antigas da planilha?"))return;
